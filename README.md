@@ -15,7 +15,7 @@
 
 # Repository Content
 
-## *Sourcecode*文件夹：
+## *Sourcecode* 文件夹：
 
 1. LeNet_wrapper：HLS项目的顶层文件与头文件；
 
@@ -23,12 +23,13 @@
 
 3. lenet_op.prj：存放HLS Project；
 
-## *ExecutableFiles*文件夹：
+## *ExecutableFiles* 文件夹：
 
 1. lenet.bit：实现lenet推理的bit流文件；
 2. lenet.tcl：tcl脚本文件；
 3. lenet.ipynb：使用Python作为控制语言的调用程序（To be completed）；
 
+## How to use
 
-2020年新⼯科联盟-Xilinx暑期学校（Summer School）项⽬的介绍文件，应该包含项⽬概要，使
-⽤的⼯具版本，⼩组成员列表（可选），板卡型号与外设列表，仓库⽬录介绍，作品照片等。
+将*ExecutableFiles* 文件夹拷贝到PYNQ-Z2开发板中，打开lenet.ipynb脚本文件运行。
+
