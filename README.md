@@ -1,5 +1,9 @@
 # Handwritten-Digits-Recognition-PYNQ-Z2
 2020年新工科联盟-Xilinx暑期学校（Summer School）项目
+**Team mates: **
+
+Zeyuan Yang, Beijing University of Posts and Telecommunications (BUPT)
+Shuo Wang, Beijing University of Posts and Telecommunications (BUPT)
 
 # Project Overview
 本实验利用PYNQ-Z2开发板，实现基于Lenet-5神经网络结构的手写数字识别。
