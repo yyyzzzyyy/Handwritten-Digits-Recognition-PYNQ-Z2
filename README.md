@@ -23,6 +23,11 @@
 
 3. lenet_op.prj：存放HLS Project；
 
+## ExecutableFiles文件夹：
+
+1. lenet.bit：实现lenet推理的bit流文件；
+2. lenet.tcl：tcl脚本文件；
+3. lenet.ipynb：使用Python作为控制语言的调用程序（To be completed）；
 
 
 2020年新⼯科联盟-Xilinx暑期学校（Summer School）项⽬的介绍文件，应该包含项⽬概要，使
