@@ -15,7 +15,7 @@
 
 # Repository Content
 
-## *Sourcecode* 文件夹：
+  ## *Sourcecode* 文件夹：
 
 1. LeNet_wrapper：HLS项目的顶层文件与头文件；
 
@@ -31,5 +31,5 @@
 
 ## How to use
 
-将*ExecutableFiles* 文件夹拷贝到PYNQ-Z2开发板中，打开lenet.ipynb脚本文件运行。
+将*ExecutableFiles*文件夹拷贝到PYNQ-Z2开发板中，打开lenet.ipynb脚本文件运行。
 
