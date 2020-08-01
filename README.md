@@ -15,13 +15,13 @@
 
 # Repository Content
 
-1. Sourcecode目录：
+## Sourcecode目录：
 
-LeNet_wrapper：HLS项目的顶层文件与头文件；
+### LeNet_wrapper：HLS项目的顶层文件与头文件；
 
-hw_library：存放网络推理阶段使用的函数，包括卷积操作、Pooling操作、全连接操作等；
+### hw_library：存放网络推理阶段使用的函数，包括卷积操作、Pooling操作、全连接操作等；
 
-lenet_op.prj：存放HLS Project；
+### lenet_op.prj：存放HLS Project；
 
 
 
