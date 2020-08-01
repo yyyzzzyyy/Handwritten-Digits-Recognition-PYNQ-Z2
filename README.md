@@ -15,7 +15,7 @@
 
 # Repository Content
 
-## Sourcecode文件夹：
+## *Sourcecode*文件夹：
 
 1. LeNet_wrapper：HLS项目的顶层文件与头文件；
 
@@ -23,7 +23,7 @@
 
 3. lenet_op.prj：存放HLS Project；
 
-## ExecutableFiles文件夹：
+## *ExecutableFiles*文件夹：
 
 1. lenet.bit：实现lenet推理的bit流文件；
 2. lenet.tcl：tcl脚本文件；
