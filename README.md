@@ -15,7 +15,7 @@
 
 # Repository Content
 
-  ## *Sourcecode* 文件夹：
+## *Sourcecode* 文件夹：
 
 1. LeNet_wrapper：HLS项目的顶层文件与头文件；
 
