@@ -1,0 +1,1989 @@
+INFO-FLOW: Workspace E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1 opened at Sat Aug 01 10:33:10 +0800 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.114 sec.
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.165 sec.
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.168 sec.
+Command     ap_source done; 0.168 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.316 sec.
+Execute   set_part xc7z020clg400-1 -tool vivado 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'LeNet_wrapper/LeNet_wrapper.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling LeNet_wrapper/LeNet_wrapper.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted LeNet_wrapper/LeNet_wrapper.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "LeNet_wrapper/LeNet_wrapper.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E LeNet_wrapper/LeNet_wrapper.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp
+Command       clang done; 0.989 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.532 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp"  -o "E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.348 sec.
+INFO-FLOW: Done: GCC PP time: 2.9 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp std=gnu++98 -directive=E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.484 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp std=gnu++98 -directive=E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/all.directive.json -quiet -fix-errors E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.478 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.LeNet_wrapper.pp.0.cpp.diag.yml E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.LeNet_wrapper.pp.0.cpp.out.log 2> E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.LeNet_wrapper.pp.0.cpp.err.log 
+Command       ap_eval done; 0.457 sec.
+WARNING: [HLS 214-111] Static variables and non-static stream cannot be used inside a dataflow region: LeNet_wrapper/LeNet_wrapper.cpp:14:23
+Execute       send_msg_by_id WARNING @200-471@%s%s 1 LeNet_wrapper/LeNet_wrapper.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file LeNet_wrapper/LeNet_wrapper.cpp
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/tidy-3.1.LeNet_wrapper.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/tidy-3.1.LeNet_wrapper.pp.0.cpp.out.log 2> E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/tidy-3.1.LeNet_wrapper.pp.0.cpp.err.log 
+Command         ap_eval done; 0.597 sec.
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/xilinx-legacy-rewriter.LeNet_wrapper.pp.0.cpp.out.log 2> E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/xilinx-legacy-rewriter.LeNet_wrapper.pp.0.cpp.err.log 
+Command         ap_eval done; 0.467 sec.
+Command       tidy_31 done; 1.1 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 2.1 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.144 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.bc" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.bc
+Command       clang done; 1.423 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/LeNet_wrapper.g.bc -hls-opt -except-internalize lenet -LD:/Xilinx/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 1.059 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 103.938 ; gain = 18.555
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 103.938 ; gain = 18.555
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.pp.bc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LD:/Xilinx/Vivado/2018.3/win64/lib -lfloatconversion -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.521 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top lenet -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.g.0.bc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.697 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 114.578 ; gain = 29.195
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.g.1.bc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.936 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.g.2.prechk.bc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 117.758 ; gain = 32.375
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.g.1.bc to E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.o.1.bc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-505] Ignore pipeline pragma in Loop whose tripcount is only 1 (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:127) in function 'SMM<1u, 25u, 20u>'.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'L3' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:126) in function 'SMM<1u, 500u, 50u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling small iteration loop 'L3' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:126) in function 'SMM<1u, 25u, 20u>' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:129) in function 'SCIG<5u, 20u, 12u, 50u, 8u, 0u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'L3' (LeNet_wrapper/../hw_library/fully_connected.h:124) in function 'FC<1u, 800u, 500u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'L3' (LeNet_wrapper/../hw_library/fully_connected.h:124) in function 'FC<1u, 500u, 10u>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (LeNet_wrapper/../hw_library/pool.h:129) in function 'pool<2u, 50u, 8u>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (LeNet_wrapper/../hw_library/pool.h:135) in function 'pool<2u, 50u, 8u>' completely with a factor of 50.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (LeNet_wrapper/../hw_library/pool.h:129) in function 'pool<2u, 20u, 24u>' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (LeNet_wrapper/../hw_library/pool.h:135) in function 'pool<2u, 20u, 24u>' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'L4' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:128) in function 'SMM<1u, 500u, 50u>' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'L3' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:126) in function 'SMM<1u, 25u, 20u>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:138) in function 'SCIG<5u, 20u, 12u, 50u, 8u, 0u>' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:143) in function 'SCIG<5u, 20u, 12u, 50u, 8u, 0u>' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.3' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:148) in function 'SCIG<5u, 20u, 12u, 50u, 8u, 0u>' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.4' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:166) in function 'SCIG<5u, 20u, 12u, 50u, 8u, 0u>' completely with a factor of 20.
+INFO: [HLS 200-489] Unrolling loop 'L4' (LeNet_wrapper/../hw_library/fully_connected.h:126) in function 'FC<1u, 800u, 500u>' completely with a factor of 25.
+INFO: [HLS 200-489] Unrolling loop 'L4' (LeNet_wrapper/../hw_library/fully_connected.h:126) in function 'FC<1u, 500u, 10u>' completely with a factor of 10.
+INFO: [XFORM 203-101] Partitioning array 'A.V.3'  in dimension 2 with a block factor 25.
+INFO: [XFORM 203-101] Partitioning array 'B.V.3'  in dimension 2 with a block factor 25.
+INFO: [XFORM 203-101] Partitioning array 'A.V.2'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'B.V.2'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'A.V.1'  in dimension 2 with a block factor 25.
+INFO: [XFORM 203-101] Partitioning array 'B.V.1'  in dimension 2 with a block factor 25.
+INFO: [XFORM 203-101] Partitioning array 'A.V'  in dimension 2 with a block factor 10.
+INFO: [XFORM 203-101] Partitioning array 'B.V'  in dimension 2 with a block factor 10.
+INFO: [XFORM 203-712] Applying dataflow to function 'lenet', detected/extracted 10 process function(s): 
+	 'AXI_DMA_SLAVE'
+	 'SCIG<5u, 1u, 28u, 20u, 24u, 0u>'
+	 'SMM<1u, 25u, 20u>'
+	 'pool<2u, 20u, 24u>'
+	 'SCIG<5u, 20u, 12u, 50u, 8u, 0u>'
+	 'SMM<1u, 500u, 50u>'
+	 'pool<2u, 50u, 8u>'
+	 'FC<1u, 800u, 500u>'
+	 'FC<1u, 500u, 10u>'
+	 'AXI_DMA_MASTER'.
+Command         transform done; 5.168 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.o.1.tmp.bc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:149:6) to (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:160:4) in function 'SCIG<5u, 20u, 12u, 50u, 8u, 0u>'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:149:6) to (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:160:4) in function 'SCIG<5u, 1u, 28u, 20u, 24u, 0u>'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'pool<2u, 50u, 8u>' (LeNet_wrapper/../hw_library/pool.h:72:49)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'pool<2u, 20u, 24u>' (LeNet_wrapper/../hw_library/pool.h:72:49)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'SMM<1u, 500u, 50u>' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:19:32)...28 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'SMM<1u, 25u, 20u>' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:19:32)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'SCIG<5u, 20u, 12u, 50u, 8u, 0u>' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:72:7)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'SCIG<5u, 1u, 28u, 20u, 24u, 0u>' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:72:7)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'FC<1u, 800u, 500u>' (LeNet_wrapper/../hw_library/fully_connected.h:16:32)...28 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'FC<1u, 500u, 10u>' (LeNet_wrapper/../hw_library/fully_connected.h:17:32)...13 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'AXI_DMA_SLAVE' (LeNet_wrapper/../hw_library/axi_dma_slave.h:3)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'AXI_DMA_MASTER' (LeNet_wrapper/../hw_library/axi_dma_master.h:3)...6 expression(s) balanced.
+Command         transform done; 3.214 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 163.734 ; gain = 78.352
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.o.2.bc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1.1.1' (LeNet_wrapper/../hw_library/pool.h:149:31) in function 'pool<2u, 50u, 8u>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1.1.1' (LeNet_wrapper/../hw_library/pool.h:147:30) in function 'pool<2u, 50u, 8u>' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1' (LeNet_wrapper/../hw_library/pool.h:146:29) in function 'pool<2u, 50u, 8u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.2' (LeNet_wrapper/../hw_library/pool.h:172:33) in function 'pool<2u, 50u, 8u>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1' (LeNet_wrapper/../hw_library/pool.h:145:28) in function 'pool<2u, 50u, 8u>' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (LeNet_wrapper/../hw_library/pool.h:144:32) in function 'pool<2u, 50u, 8u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1.1.1' (LeNet_wrapper/../hw_library/pool.h:149:31) in function 'pool<2u, 20u, 24u>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1.1.1' (LeNet_wrapper/../hw_library/pool.h:147:30) in function 'pool<2u, 20u, 24u>' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.1' (LeNet_wrapper/../hw_library/pool.h:146:29) in function 'pool<2u, 20u, 24u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1.2' (LeNet_wrapper/../hw_library/pool.h:172:33) in function 'pool<2u, 20u, 24u>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1' (LeNet_wrapper/../hw_library/pool.h:145:28) in function 'pool<2u, 20u, 24u>' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (LeNet_wrapper/../hw_library/pool.h:144:32) in function 'pool<2u, 20u, 24u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:80:15) in function 'SMM<1u, 500u, 50u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'L2' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:124:7) in function 'SMM<1u, 500u, 50u>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'L1' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:122:6) in function 'SMM<1u, 500u, 50u>' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:98:22) in function 'SMM<1u, 500u, 50u>' : 
+
+the outer loop is not a perfect loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:80:15) in function 'SMM<1u, 25u, 20u>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'L1' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:122:6) in function 'SMM<1u, 25u, 20u>' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:98:22) in function 'SMM<1u, 25u, 20u>' : 
+
+the outer loop is not a perfect loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (LeNet_wrapper/../hw_library/fully_connected.h:78:15) in function 'FC<1u, 800u, 500u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'L2' (LeNet_wrapper/../hw_library/fully_connected.h:122:7) in function 'FC<1u, 800u, 500u>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'L1' (LeNet_wrapper/../hw_library/fully_connected.h:120:6) in function 'FC<1u, 800u, 500u>' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (LeNet_wrapper/../hw_library/fully_connected.h:96:22) in function 'FC<1u, 800u, 500u>' : 
+
+the outer loop is not a perfect loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (LeNet_wrapper/../hw_library/fully_connected.h:78:15) in function 'FC<1u, 500u, 10u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'L2' (LeNet_wrapper/../hw_library/fully_connected.h:122:7) in function 'FC<1u, 500u, 10u>'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'L1' (LeNet_wrapper/../hw_library/fully_connected.h:120:6) in function 'FC<1u, 500u, 10u>' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (LeNet_wrapper/../hw_library/fully_connected.h:96:22) in function 'FC<1u, 500u, 10u>' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-631] Renaming function 'SCIG<5u, 20u, 12u, 50u, 8u, 0u>' to 'SCIG' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:72:7)
+WARNING: [XFORM 203-631] Renaming function 'SCIG<5u, 1u, 28u, 20u, 24u, 0u>' to 'SCIG.1' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:72:7)
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'inputBuf.V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:113).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'inputBuf.V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:113).
+Command         transform done; 5.936 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 278.676 ; gain = 193.293
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 16.648 sec.
+Command     elaborate done; 25.906 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'lenet' ...
+Execute       ap_set_top_model lenet 
+WARNING: [SYN 201-103] Legalizing function name 'SCIG.1' to 'SCIG_1'.
+WARNING: [SYN 201-103] Legalizing function name 'SMM<1u, 25u, 20u>' to 'SMM_1u_25u_20u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'pool<2u, 20u, 24u>' to 'pool_2u_20u_24u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'SMM<1u, 500u, 50u>' to 'SMM_1u_500u_50u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'pool<2u, 50u, 8u>' to 'pool_2u_50u_8u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'FC<1u, 800u, 500u>' to 'FC_1u_800u_500u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'FC<1u, 500u, 10u>' to 'FC_1u_500u_10u_s'.
+Execute       get_model_list lenet -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model lenet 
+Execute       preproc_iomode -model AXI_DMA_MASTER 
+Execute       preproc_iomode -model FC<1u, 500u, 10u> 
+Execute       preproc_iomode -model FC<1u, 800u, 500u> 
+Execute       preproc_iomode -model pool<2u, 50u, 8u> 
+Execute       preproc_iomode -model SMM<1u, 500u, 50u> 
+Execute       preproc_iomode -model SCIG 
+Execute       preproc_iomode -model pool<2u, 20u, 24u> 
+Execute       preproc_iomode -model SMM<1u, 25u, 20u> 
+Execute       preproc_iomode -model SCIG.1 
+Execute       preproc_iomode -model AXI_DMA_SLAVE 
+Execute       get_model_list lenet -filter all-wo-channel 
+INFO-FLOW: Model list for configure: AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet
+INFO-FLOW: Configuring Module : AXI_DMA_SLAVE ...
+Execute       set_default_model AXI_DMA_SLAVE 
+Execute       apply_spec_resource_limit AXI_DMA_SLAVE 
+INFO-FLOW: Configuring Module : SCIG.1 ...
+Execute       set_default_model SCIG.1 
+Execute       apply_spec_resource_limit SCIG.1 
+INFO-FLOW: Configuring Module : SMM<1u, 25u, 20u> ...
+Execute       set_default_model SMM<1u, 25u, 20u> 
+Execute       apply_spec_resource_limit SMM<1u, 25u, 20u> 
+INFO-FLOW: Configuring Module : pool<2u, 20u, 24u> ...
+Execute       set_default_model pool<2u, 20u, 24u> 
+Execute       apply_spec_resource_limit pool<2u, 20u, 24u> 
+INFO-FLOW: Configuring Module : SCIG ...
+Execute       set_default_model SCIG 
+Execute       apply_spec_resource_limit SCIG 
+INFO-FLOW: Configuring Module : SMM<1u, 500u, 50u> ...
+Execute       set_default_model SMM<1u, 500u, 50u> 
+Execute       apply_spec_resource_limit SMM<1u, 500u, 50u> 
+INFO-FLOW: Configuring Module : pool<2u, 50u, 8u> ...
+Execute       set_default_model pool<2u, 50u, 8u> 
+Execute       apply_spec_resource_limit pool<2u, 50u, 8u> 
+INFO-FLOW: Configuring Module : FC<1u, 800u, 500u> ...
+Execute       set_default_model FC<1u, 800u, 500u> 
+Execute       apply_spec_resource_limit FC<1u, 800u, 500u> 
+INFO-FLOW: Configuring Module : FC<1u, 500u, 10u> ...
+Execute       set_default_model FC<1u, 500u, 10u> 
+Execute       apply_spec_resource_limit FC<1u, 500u, 10u> 
+INFO-FLOW: Configuring Module : AXI_DMA_MASTER ...
+Execute       set_default_model AXI_DMA_MASTER 
+Execute       apply_spec_resource_limit AXI_DMA_MASTER 
+INFO-FLOW: Configuring Module : lenet ...
+Execute       set_default_model lenet 
+Execute       apply_spec_resource_limit lenet 
+INFO-FLOW: Model list for preprocess: AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet
+INFO-FLOW: Preprocessing Module: AXI_DMA_SLAVE ...
+Execute       set_default_model AXI_DMA_SLAVE 
+Execute       cdfg_preprocess -model AXI_DMA_SLAVE 
+Execute       rtl_gen_preprocess AXI_DMA_SLAVE 
+INFO-FLOW: Preprocessing Module: SCIG.1 ...
+Execute       set_default_model SCIG.1 
+Execute       cdfg_preprocess -model SCIG.1 
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:110) on 'alloca' operation ('IFMPadDimSqrt', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:109) due to incompatible operation sets.
+Execute       rtl_gen_preprocess SCIG.1 
+INFO-FLOW: Preprocessing Module: SMM<1u, 25u, 20u> ...
+Execute       set_default_model SMM<1u, 25u, 20u> 
+Execute       cdfg_preprocess -model SMM<1u, 25u, 20u> 
+Execute       rtl_gen_preprocess SMM<1u, 25u, 20u> 
+INFO-FLOW: Preprocessing Module: pool<2u, 20u, 24u> ...
+Execute       set_default_model pool<2u, 20u, 24u> 
+Execute       cdfg_preprocess -model pool<2u, 20u, 24u> 
+Execute       rtl_gen_preprocess pool<2u, 20u, 24u> 
+INFO-FLOW: Preprocessing Module: SCIG ...
+Execute       set_default_model SCIG 
+Execute       cdfg_preprocess -model SCIG 
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:110) on 'alloca' operation ('IFMPadDimSqrt', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:109) due to incompatible operation sets.
+Execute       rtl_gen_preprocess SCIG 
+INFO-FLOW: Preprocessing Module: SMM<1u, 500u, 50u> ...
+Execute       set_default_model SMM<1u, 500u, 50u> 
+Execute       cdfg_preprocess -model SMM<1u, 500u, 50u> 
+Execute       rtl_gen_preprocess SMM<1u, 500u, 50u> 
+INFO-FLOW: Preprocessing Module: pool<2u, 50u, 8u> ...
+Execute       set_default_model pool<2u, 50u, 8u> 
+Execute       cdfg_preprocess -model pool<2u, 50u, 8u> 
+Execute       rtl_gen_preprocess pool<2u, 50u, 8u> 
+INFO-FLOW: Preprocessing Module: FC<1u, 800u, 500u> ...
+Execute       set_default_model FC<1u, 800u, 500u> 
+Execute       cdfg_preprocess -model FC<1u, 800u, 500u> 
+Execute       rtl_gen_preprocess FC<1u, 800u, 500u> 
+INFO-FLOW: Preprocessing Module: FC<1u, 500u, 10u> ...
+Execute       set_default_model FC<1u, 500u, 10u> 
+Execute       cdfg_preprocess -model FC<1u, 500u, 10u> 
+Execute       rtl_gen_preprocess FC<1u, 500u, 10u> 
+INFO-FLOW: Preprocessing Module: AXI_DMA_MASTER ...
+Execute       set_default_model AXI_DMA_MASTER 
+Execute       cdfg_preprocess -model AXI_DMA_MASTER 
+Execute       rtl_gen_preprocess AXI_DMA_MASTER 
+INFO-FLOW: Preprocessing Module: lenet ...
+Execute       set_default_model lenet 
+Execute       cdfg_preprocess -model lenet 
+Execute       rtl_gen_preprocess lenet 
+INFO-FLOW: Model list for synthesis: AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXI_DMA_SLAVE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model AXI_DMA_SLAVE 
+Execute       schedule -model AXI_DMA_SLAVE 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.333 sec.
+INFO: [HLS 200-111]  Elapsed time: 27.49 seconds; current allocated memory: 229.834 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.verbose.sched.rpt -verbose -f 
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.sched.adb -f 
+INFO-FLOW: Finish scheduling AXI_DMA_SLAVE.
+Execute       set_default_model AXI_DMA_SLAVE 
+Execute       bind -model AXI_DMA_SLAVE 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=AXI_DMA_SLAVE
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.215 seconds; current allocated memory: 230.037 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.verbose.bind.rpt -verbose -f 
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.bind.adb -f 
+INFO-FLOW: Finish binding AXI_DMA_SLAVE.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SCIG_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model SCIG.1 
+Execute       schedule -model SCIG.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.615 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.783 seconds; current allocated memory: 230.497 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.verbose.sched.rpt -verbose -f 
+Command       report done; 0.114 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.sched.adb -f 
+INFO-FLOW: Finish scheduling SCIG.1.
+Execute       set_default_model SCIG.1 
+Execute       bind -model SCIG.1 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=SCIG.1
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 230.976 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.verbose.bind.rpt -verbose -f 
+Command       report done; 0.134 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.bind.adb -f 
+INFO-FLOW: Finish binding SCIG.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SMM_1u_25u_20u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model SMM<1u, 25u, 20u> 
+Execute       schedule -model SMM<1u, 25u, 20u> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'L1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.957 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.235 seconds; current allocated memory: 232.590 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 3 loops out of a total 7 loops have been pipelined in this design.
+Command       report done; 0.424 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.sched.adb -f 
+Command       db_write done; 0.219 sec.
+INFO-FLOW: Finish scheduling SMM<1u, 25u, 20u>.
+Execute       set_default_model SMM<1u, 25u, 20u> 
+Execute       bind -model SMM<1u, 25u, 20u> 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=SMM<1u, 25u, 20u>
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.184 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.872 seconds; current allocated memory: 235.751 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.verbose.bind.rpt -verbose -f 
+Command       report done; 0.429 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.bind.adb -f 
+Command       db_write done; 0.252 sec.
+INFO-FLOW: Finish binding SMM<1u, 25u, 20u>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_2u_20u_24u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model pool<2u, 20u, 24u> 
+Execute       schedule -model pool<2u, 20u, 24u> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.1.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'pool_2u_20u_24u_s': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation (LeNet_wrapper/../hw_library/pool.h:153) of variable 'acc_load_2_valIn_V', LeNet_wrapper/../hw_library/pool.h:153 on array 'acc', LeNet_wrapper/../hw_library/pool.h:126 and 'load' operation ('acc_load_2', LeNet_wrapper/../hw_library/pool.h:153) on array 'acc', LeNet_wrapper/../hw_library/pool.h:126.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.1.2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.804 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.563 seconds; current allocated memory: 236.476 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.verbose.sched.rpt -verbose -f 
+Command       report done; 0.268 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.sched.adb -f 
+INFO-FLOW: Finish scheduling pool<2u, 20u, 24u>.
+Execute       set_default_model pool<2u, 20u, 24u> 
+Execute       bind -model pool<2u, 20u, 24u> 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=pool<2u, 20u, 24u>
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'acc' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.179 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.594 seconds; current allocated memory: 237.250 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.verbose.bind.rpt -verbose -f 
+Command       report done; 0.25 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.bind.adb -f 
+Command       db_write done; 0.115 sec.
+INFO-FLOW: Finish binding pool<2u, 20u, 24u>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SCIG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model SCIG 
+Execute       schedule -model SCIG 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'SCIG': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('inElem_V_load', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:149) on array 'inElem.V', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:134 and 'store' operation (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:145) of variable 'tmp_92', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:145 on array 'inElem.V', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:134.
+WARNING: [SCHED 204-68] The II Violation in module 'SCIG': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:144) and fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:144).
+WARNING: [SCHED 204-68] The II Violation in module 'SCIG': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:144) and fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:144).
+WARNING: [SCHED 204-68] The II Violation in module 'SCIG': Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:144) and fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:144).
+WARNING: [SCHED 204-68] The II Violation in module 'SCIG': Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1)
+   between fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:144) and fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:144).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 20, Depth = 43.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 2.554 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.001 seconds; current allocated memory: 238.739 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.verbose.sched.rpt -verbose -f 
+Command       report done; 0.41 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.sched.adb -f 
+Command       db_write done; 0.201 sec.
+INFO-FLOW: Finish scheduling SCIG.
+Execute       set_default_model SCIG 
+Execute       bind -model SCIG 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=SCIG
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'inElem_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.225 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.887 seconds; current allocated memory: 240.120 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.verbose.bind.rpt -verbose -f 
+Command       report done; 0.386 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.bind.adb -f 
+Command       db_write done; 0.228 sec.
+INFO-FLOW: Finish binding SCIG.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SMM_1u_500u_50u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model SMM<1u, 500u, 50u> 
+Execute       schedule -model SMM<1u, 500u, 50u> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'L1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'L2_L3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
+WARNING: [SCHED 204-21] Estimated clock period (10.6231ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'SMM_1u_500u_50u_s' consists of the following:
+	'mul' operation of DSP[602] ('ret_V', LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:129) [455]  (3.36 ns)
+	'add' operation of DSP[602] ('tmp4', LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:129) [602]  (3.02 ns)
+	'add' operation ('tmp3', LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:129) [607]  (2.11 ns)
+	'add' operation ('tmp2', LeNet_wrapper/../hw_library/fixed_point_stream_convolution.h:129) [617]  (2.14 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.465 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.172 seconds; current allocated memory: 242.664 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.verbose.sched.rpt -verbose -f 
+Command       report done; 0.578 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.sched.adb -f 
+Command       db_write done; 0.307 sec.
+INFO-FLOW: Finish scheduling SMM<1u, 500u, 50u>.
+Execute       set_default_model SMM<1u, 500u, 50u> 
+Execute       bind -model SMM<1u, 500u, 50u> 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=SMM<1u, 500u, 50u>
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.252 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.193 seconds; current allocated memory: 247.116 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.verbose.bind.rpt -verbose -f 
+Command       report done; 0.694 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.bind.adb -f 
+Command       db_write done; 0.339 sec.
+INFO-FLOW: Finish binding SMM<1u, 500u, 50u>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pool_2u_50u_8u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model pool<2u, 50u, 8u> 
+Execute       schedule -model pool<2u, 50u, 8u> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.1.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'pool_2u_50u_8u_s': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation (LeNet_wrapper/../hw_library/pool.h:153) of variable 'acc_load_1_valIn_V', LeNet_wrapper/../hw_library/pool.h:153 on array 'acc', LeNet_wrapper/../hw_library/pool.h:126 and 'load' operation ('acc_load_1', LeNet_wrapper/../hw_library/pool.h:153) on array 'acc', LeNet_wrapper/../hw_library/pool.h:126.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.1.2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.828 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.946 seconds; current allocated memory: 247.972 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.verbose.sched.rpt -verbose -f 
+Command       report done; 0.301 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.sched.adb -f 
+Command       db_write done; 0.116 sec.
+INFO-FLOW: Finish scheduling pool<2u, 50u, 8u>.
+Execute       set_default_model pool<2u, 50u, 8u> 
+Execute       bind -model pool<2u, 50u, 8u> 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=pool<2u, 50u, 8u>
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'acc' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.204 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.682 seconds; current allocated memory: 248.850 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.verbose.bind.rpt -verbose -f 
+Command       report done; 0.251 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.bind.adb -f 
+Command       db_write done; 0.123 sec.
+INFO-FLOW: Finish binding pool<2u, 50u, 8u>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FC_1u_800u_500u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model FC<1u, 800u, 500u> 
+Execute       schedule -model FC<1u, 800u, 500u> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'L1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'L2_L3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+WARNING: [SCHED 204-21] Estimated clock period (10.6231ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'FC_1u_800u_500u_s' consists of the following:
+	'mul' operation of DSP[585] ('ret_V', LeNet_wrapper/../hw_library/fully_connected.h:127) [438]  (3.36 ns)
+	'add' operation of DSP[585] ('tmp4', LeNet_wrapper/../hw_library/fully_connected.h:127) [585]  (3.02 ns)
+	'add' operation ('tmp3', LeNet_wrapper/../hw_library/fully_connected.h:127) [590]  (2.11 ns)
+	'add' operation ('tmp2', LeNet_wrapper/../hw_library/fully_connected.h:127) [600]  (2.14 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.617 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.084 seconds; current allocated memory: 251.387 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.verbose.sched.rpt -verbose -f 
+Command       report done; 0.525 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.sched.adb -f 
+Command       db_write done; 0.305 sec.
+INFO-FLOW: Finish scheduling FC<1u, 800u, 500u>.
+Execute       set_default_model FC<1u, 800u, 500u> 
+Execute       bind -model FC<1u, 800u, 500u> 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=FC<1u, 800u, 500u>
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.239 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.131 seconds; current allocated memory: 266.220 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.verbose.bind.rpt -verbose -f 
+Command       report done; 0.621 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.bind.adb -f 
+Command       db_write done; 0.332 sec.
+INFO-FLOW: Finish binding FC<1u, 800u, 500u>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FC_1u_500u_10u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model FC<1u, 500u, 10u> 
+Execute       schedule -model FC<1u, 500u, 10u> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'L1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'L2_L3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
+WARNING: [SCHED 204-21] Estimated clock period (10.6231ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'FC_1u_500u_10u_s' consists of the following:
+	'mul' operation of DSP[325] ('ret_V_1', LeNet_wrapper/../hw_library/fully_connected.h:127) [275]  (3.36 ns)
+	'add' operation of DSP[325] ('tmp3', LeNet_wrapper/../hw_library/fully_connected.h:127) [325]  (3.02 ns)
+	'add' operation ('tmp2', LeNet_wrapper/../hw_library/fully_connected.h:127) [330]  (2.11 ns)
+	'add' operation ('tmp_100', LeNet_wrapper/../hw_library/fully_connected.h:127) [339]  (2.14 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.986 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.036 seconds; current allocated memory: 267.500 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.verbose.sched.rpt -verbose -f 
+Command       report done; 0.328 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.sched.adb -f 
+Command       db_write done; 0.173 sec.
+INFO-FLOW: Finish scheduling FC<1u, 500u, 10u>.
+Execute       set_default_model FC<1u, 500u, 10u> 
+Execute       bind -model FC<1u, 500u, 10u> 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=FC<1u, 500u, 10u>
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.173 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.744 seconds; current allocated memory: 269.305 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.verbose.bind.rpt -verbose -f 
+Command       report done; 0.405 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.bind.adb -f 
+Command       db_write done; 0.193 sec.
+INFO-FLOW: Finish binding FC<1u, 500u, 10u>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXI_DMA_MASTER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model AXI_DMA_MASTER 
+Execute       schedule -model AXI_DMA_MASTER 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.367 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.064 seconds; current allocated memory: 269.601 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.verbose.sched.rpt -verbose -f 
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.sched.adb -f 
+INFO-FLOW: Finish scheduling AXI_DMA_MASTER.
+Execute       set_default_model AXI_DMA_MASTER 
+Execute       bind -model AXI_DMA_MASTER 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=AXI_DMA_MASTER
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.271 seconds; current allocated memory: 269.856 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.verbose.bind.rpt -verbose -f 
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.bind.adb -f 
+INFO-FLOW: Finish binding AXI_DMA_MASTER.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model lenet 
+Execute       schedule -model lenet 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.271 seconds; current allocated memory: 270.033 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.verbose.sched.rpt -verbose -f 
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.sched.adb -f 
+INFO-FLOW: Finish scheduling lenet.
+Execute       set_default_model lenet 
+Execute       bind -model lenet 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=lenet
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 3.121 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.283 seconds; current allocated memory: 271.840 MB.
+Execute       report -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.verbose.bind.rpt -verbose -f 
+Command       report done; 1.338 sec.
+Execute       db_write -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.bind.adb -f 
+INFO-FLOW: Finish binding lenet.
+Execute       get_model_list lenet -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess AXI_DMA_SLAVE 
+Execute       rtl_gen_preprocess SCIG.1 
+Execute       rtl_gen_preprocess SMM<1u, 25u, 20u> 
+Execute       rtl_gen_preprocess pool<2u, 20u, 24u> 
+Execute       rtl_gen_preprocess SCIG 
+Execute       rtl_gen_preprocess SMM<1u, 500u, 50u> 
+Execute       rtl_gen_preprocess pool<2u, 50u, 8u> 
+Execute       rtl_gen_preprocess FC<1u, 800u, 500u> 
+Execute       rtl_gen_preprocess FC<1u, 500u, 10u> 
+Execute       rtl_gen_preprocess AXI_DMA_MASTER 
+Execute       rtl_gen_preprocess lenet 
+INFO-FLOW: Model list for RTL generation: AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXI_DMA_SLAVE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model AXI_DMA_SLAVE -vendor xilinx -mg_file E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXI_DMA_SLAVE'.
+INFO: [HLS 200-111]  Elapsed time: 1.53 seconds; current allocated memory: 272.891 MB.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       gen_rtl AXI_DMA_SLAVE -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/systemc/AXI_DMA_SLAVE -synmodules AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet 
+Execute       gen_rtl AXI_DMA_SLAVE -style xilinx -f -lang vhdl -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/vhdl/AXI_DMA_SLAVE 
+Execute       gen_rtl AXI_DMA_SLAVE -style xilinx -f -lang vlog -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/verilog/AXI_DMA_SLAVE 
+Execute       gen_tb_info AXI_DMA_SLAVE -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE -p E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db 
+Execute       report -model AXI_DMA_SLAVE -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/AXI_DMA_SLAVE_csynth.rpt -f 
+Execute       report -model AXI_DMA_SLAVE -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/AXI_DMA_SLAVE_csynth.xml -f -x 
+Execute       report -model AXI_DMA_SLAVE -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.verbose.rpt -verbose -f 
+Execute       db_write -model AXI_DMA_SLAVE -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SCIG_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model SCIG.1 -vendor xilinx -mg_file E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SCIG_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.495 seconds; current allocated memory: 273.911 MB.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       gen_rtl SCIG.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/systemc/SCIG_1 -synmodules AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet 
+Execute       gen_rtl SCIG.1 -style xilinx -f -lang vhdl -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/vhdl/SCIG_1 
+Execute       gen_rtl SCIG.1 -style xilinx -f -lang vlog -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/verilog/SCIG_1 
+Execute       gen_tb_info SCIG.1 -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1 -p E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db 
+Execute       report -model SCIG.1 -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/SCIG_1_csynth.rpt -f 
+Execute       report -model SCIG.1 -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/SCIG_1_csynth.xml -f -x 
+Execute       report -model SCIG.1 -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.verbose.rpt -verbose -f 
+Command       report done; 0.177 sec.
+Execute       db_write -model SCIG.1 -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.adb -f 
+Command       db_write done; 0.142 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SMM_1u_25u_20u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model SMM<1u, 25u, 20u> -vendor xilinx -mg_file E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'B_COL_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'B_ROW_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'OFMDim_current_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'A_ROW_1' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_0' to 'SMM_1u_25u_20u_s_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_1' to 'SMM_1u_25u_20u_s_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_2' to 'SMM_1u_25u_20u_s_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_3' to 'SMM_1u_25u_20u_s_eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_4' to 'SMM_1u_25u_20u_s_fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_5' to 'SMM_1u_25u_20u_s_g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_6' to 'SMM_1u_25u_20u_s_hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_7' to 'SMM_1u_25u_20u_s_ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_8' to 'SMM_1u_25u_20u_s_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_9' to 'SMM_1u_25u_20u_s_kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_10' to 'SMM_1u_25u_20u_s_lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_11' to 'SMM_1u_25u_20u_s_mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_12' to 'SMM_1u_25u_20u_s_ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_13' to 'SMM_1u_25u_20u_s_ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_14' to 'SMM_1u_25u_20u_s_pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_15' to 'SMM_1u_25u_20u_s_qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_16' to 'SMM_1u_25u_20u_s_rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_17' to 'SMM_1u_25u_20u_s_sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_18' to 'SMM_1u_25u_20u_s_tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_19' to 'SMM_1u_25u_20u_s_udo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_20' to 'SMM_1u_25u_20u_s_vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_21' to 'SMM_1u_25u_20u_s_wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_22' to 'SMM_1u_25u_20u_s_xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_23' to 'SMM_1u_25u_20u_s_yd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_B_V_2_24' to 'SMM_1u_25u_20u_s_zec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_0' to 'SMM_1u_25u_20u_s_Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_1' to 'SMM_1u_25u_20u_s_Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_2' to 'SMM_1u_25u_20u_s_CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_3' to 'SMM_1u_25u_20u_s_DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_4' to 'SMM_1u_25u_20u_s_Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_5' to 'SMM_1u_25u_20u_s_Ffa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_6' to 'SMM_1u_25u_20u_s_Gfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_7' to 'SMM_1u_25u_20u_s_Hfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_8' to 'SMM_1u_25u_20u_s_IfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_9' to 'SMM_1u_25u_20u_s_JfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_10' to 'SMM_1u_25u_20u_s_KfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_11' to 'SMM_1u_25u_20u_s_Lf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_12' to 'SMM_1u_25u_20u_s_Mgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_13' to 'SMM_1u_25u_20u_s_Ngs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_14' to 'SMM_1u_25u_20u_s_OgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_15' to 'SMM_1u_25u_20u_s_PgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_16' to 'SMM_1u_25u_20u_s_QgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_17' to 'SMM_1u_25u_20u_s_Rg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_18' to 'SMM_1u_25u_20u_s_Shg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_19' to 'SMM_1u_25u_20u_s_Thq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_20' to 'SMM_1u_25u_20u_s_UhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_21' to 'SMM_1u_25u_20u_s_VhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_22' to 'SMM_1u_25u_20u_s_WhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_23' to 'SMM_1u_25u_20u_s_Xh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_25u_20u_s_A_V_2_24' to 'SMM_1u_25u_20u_s_Yie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_mac_muladd_8s_8s_20ns_20_1_1' to 'lenet_mac_muladd_Zio' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_mac_muladd_Zio': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_mux_255_8_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SMM_1u_25u_20u_s'.
+Command       create_rtl_model done; 1.114 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.821 seconds; current allocated memory: 277.439 MB.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       gen_rtl SMM<1u, 25u, 20u> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/systemc/SMM_1u_25u_20u_s -synmodules AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet 
+Execute       gen_rtl SMM<1u, 25u, 20u> -style xilinx -f -lang vhdl -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/vhdl/SMM_1u_25u_20u_s 
+Execute       gen_rtl SMM<1u, 25u, 20u> -style xilinx -f -lang vlog -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/verilog/SMM_1u_25u_20u_s 
+Execute       gen_tb_info SMM<1u, 25u, 20u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s -p E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.134 sec.
+Execute       report -model SMM<1u, 25u, 20u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/SMM_1u_25u_20u_s_csynth.rpt -f 
+Command       report done; 0.14 sec.
+Execute       report -model SMM<1u, 25u, 20u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/SMM_1u_25u_20u_s_csynth.xml -f -x 
+Command       report done; 0.131 sec.
+Execute       report -model SMM<1u, 25u, 20u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.verbose.rpt -verbose -f 
+Command       report done; 0.572 sec.
+Execute       db_write -model SMM<1u, 25u, 20u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.adb -f 
+Command       db_write done; 0.415 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_2u_20u_24u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model pool<2u, 20u, 24u> -vendor xilinx -mg_file E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'IFMCH_curr_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'IFMDim_curr_1' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'pool_2u_20u_24u_s_buf' to 'pool_2u_20u_24u_s0iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_2u_20u_24u_s_acc' to 'pool_2u_20u_24u_s1iI' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_2u_20u_24u_s'.
+Command       create_rtl_model done; 0.174 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.152 seconds; current allocated memory: 279.574 MB.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       gen_rtl pool<2u, 20u, 24u> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/systemc/pool_2u_20u_24u_s -synmodules AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet 
+Execute       gen_rtl pool<2u, 20u, 24u> -style xilinx -f -lang vhdl -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/vhdl/pool_2u_20u_24u_s 
+Execute       gen_rtl pool<2u, 20u, 24u> -style xilinx -f -lang vlog -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/verilog/pool_2u_20u_24u_s 
+Execute       gen_tb_info pool<2u, 20u, 24u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s -p E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db 
+Execute       report -model pool<2u, 20u, 24u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/pool_2u_20u_24u_s_csynth.rpt -f 
+Execute       report -model pool<2u, 20u, 24u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/pool_2u_20u_24u_s_csynth.xml -f -x 
+Execute       report -model pool<2u, 20u, 24u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.verbose.rpt -verbose -f 
+Command       report done; 0.318 sec.
+Execute       db_write -model pool<2u, 20u, 24u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.adb -f 
+Command       db_write done; 0.229 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SCIG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model SCIG -vendor xilinx -mg_file E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SCIG'.
+Command       create_rtl_model done; 0.335 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.421 seconds; current allocated memory: 283.089 MB.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       gen_rtl SCIG -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/systemc/SCIG -synmodules AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet 
+Execute       gen_rtl SCIG -style xilinx -f -lang vhdl -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/vhdl/SCIG 
+Execute       gen_rtl SCIG -style xilinx -f -lang vlog -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/verilog/SCIG 
+Execute       gen_tb_info SCIG -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG -p E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.144 sec.
+Execute       report -model SCIG -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/SCIG_csynth.rpt -f 
+Command       report done; 0.138 sec.
+Execute       report -model SCIG -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/SCIG_csynth.xml -f -x 
+Command       report done; 0.118 sec.
+Execute       report -model SCIG -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.verbose.rpt -verbose -f 
+Command       report done; 0.493 sec.
+Execute       db_write -model SCIG -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.adb -f 
+Command       db_write done; 0.399 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SMM_1u_500u_50u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model SMM<1u, 500u, 50u> -vendor xilinx -mg_file E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'B_COL' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'B_ROW' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'OFMDim_current' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'A_ROW' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_0' to 'SMM_1u_500u_50u_s2iS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_0' to 'SMM_1u_500u_50u_s3i2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_1' to 'SMM_1u_500u_50u_s4jc' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_1' to 'SMM_1u_500u_50u_s5jm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_2' to 'SMM_1u_500u_50u_s6jw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_2' to 'SMM_1u_500u_50u_s7jG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_3' to 'SMM_1u_500u_50u_s8jQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_3' to 'SMM_1u_500u_50u_s9j0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_4' to 'SMM_1u_500u_50u_sbak' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_4' to 'SMM_1u_500u_50u_sbbk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_5' to 'SMM_1u_500u_50u_sbck' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_5' to 'SMM_1u_500u_50u_sbdk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_6' to 'SMM_1u_500u_50u_sbek' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_6' to 'SMM_1u_500u_50u_sbfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_7' to 'SMM_1u_500u_50u_sbgk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_7' to 'SMM_1u_500u_50u_sbhl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_8' to 'SMM_1u_500u_50u_sbil' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_8' to 'SMM_1u_500u_50u_sbjl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_9' to 'SMM_1u_500u_50u_sbkl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_9' to 'SMM_1u_500u_50u_sbll' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_10' to 'SMM_1u_500u_50u_sbml' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_10' to 'SMM_1u_500u_50u_sbnm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_11' to 'SMM_1u_500u_50u_sbom' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_11' to 'SMM_1u_500u_50u_sbpm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_12' to 'SMM_1u_500u_50u_sbqm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_12' to 'SMM_1u_500u_50u_sbrm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_13' to 'SMM_1u_500u_50u_sbsm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_13' to 'SMM_1u_500u_50u_sbtn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_14' to 'SMM_1u_500u_50u_sbun' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_14' to 'SMM_1u_500u_50u_sbvn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_15' to 'SMM_1u_500u_50u_sbwn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_15' to 'SMM_1u_500u_50u_sbxn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_16' to 'SMM_1u_500u_50u_sbyn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_16' to 'SMM_1u_500u_50u_sbzo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_17' to 'SMM_1u_500u_50u_sbAo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_17' to 'SMM_1u_500u_50u_sbBo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_18' to 'SMM_1u_500u_50u_sbCo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_18' to 'SMM_1u_500u_50u_sbDo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_19' to 'SMM_1u_500u_50u_sbEo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_19' to 'SMM_1u_500u_50u_sbFp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_20' to 'SMM_1u_500u_50u_sbGp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_20' to 'SMM_1u_500u_50u_sbHp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_21' to 'SMM_1u_500u_50u_sbIp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_21' to 'SMM_1u_500u_50u_sbJp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_22' to 'SMM_1u_500u_50u_sbKp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_22' to 'SMM_1u_500u_50u_sbLp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_23' to 'SMM_1u_500u_50u_sbMq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_23' to 'SMM_1u_500u_50u_sbNq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_A_V_3_24' to 'SMM_1u_500u_50u_sbOq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'SMM_1u_500u_50u_s_B_V_3_24' to 'SMM_1u_500u_50u_sbPq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_urem_9ns_6ns_9_13_1' to 'lenet_urem_9ns_6nbQq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_mac_muladd_8s_8s_16s_17_1_1' to 'lenet_mac_muladd_bRq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_mac_muladd_8s_8s_17s_17_1_1' to 'lenet_mac_muladd_bSr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_mul_mul_9ns_11ns_20_1_1' to 'lenet_mul_mul_9nsbTr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_mul_mul_11ns_9ns_20_1_1' to 'lenet_mul_mul_11nbUr' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_mac_muladd_bRq': 9 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_mac_muladd_bSr': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_mul_mul_11nbUr': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_mul_mul_9nsbTr': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_urem_9ns_6nbQq': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SMM_1u_500u_50u_s'.
+Command       create_rtl_model done; 1.3 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.148 seconds; current allocated memory: 288.047 MB.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       gen_rtl SMM<1u, 500u, 50u> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/systemc/SMM_1u_500u_50u_s -synmodules AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet 
+Execute       gen_rtl SMM<1u, 500u, 50u> -style xilinx -f -lang vhdl -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/vhdl/SMM_1u_500u_50u_s 
+Execute       gen_rtl SMM<1u, 500u, 50u> -style xilinx -f -lang vlog -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/verilog/SMM_1u_500u_50u_s 
+Execute       gen_tb_info SMM<1u, 500u, 50u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s -p E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.152 sec.
+Execute       report -model SMM<1u, 500u, 50u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/SMM_1u_500u_50u_s_csynth.rpt -f 
+Command       report done; 0.156 sec.
+Execute       report -model SMM<1u, 500u, 50u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/SMM_1u_500u_50u_s_csynth.xml -f -x 
+Command       report done; 0.142 sec.
+Execute       report -model SMM<1u, 500u, 50u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.verbose.rpt -verbose -f 
+Command       report done; 0.835 sec.
+Execute       db_write -model SMM<1u, 500u, 50u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.adb -f 
+Command       db_write done; 0.585 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pool_2u_50u_8u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model pool<2u, 50u, 8u> -vendor xilinx -mg_file E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'IFMCH_curr' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'IFMDim_curr' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'pool_2u_50u_8u_s_buf' to 'pool_2u_50u_8u_s_bVr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'pool_2u_50u_8u_s_acc' to 'pool_2u_50u_8u_s_bWr' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pool_2u_50u_8u_s'.
+Command       create_rtl_model done; 0.209 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.861 seconds; current allocated memory: 290.627 MB.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       gen_rtl pool<2u, 50u, 8u> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/systemc/pool_2u_50u_8u_s -synmodules AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet 
+Execute       gen_rtl pool<2u, 50u, 8u> -style xilinx -f -lang vhdl -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/vhdl/pool_2u_50u_8u_s 
+Execute       gen_rtl pool<2u, 50u, 8u> -style xilinx -f -lang vlog -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/verilog/pool_2u_50u_8u_s 
+Execute       gen_tb_info pool<2u, 50u, 8u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s -p E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db 
+Execute       report -model pool<2u, 50u, 8u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/pool_2u_50u_8u_s_csynth.rpt -f 
+Execute       report -model pool<2u, 50u, 8u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/pool_2u_50u_8u_s_csynth.xml -f -x 
+Execute       report -model pool<2u, 50u, 8u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.verbose.rpt -verbose -f 
+Command       report done; 0.291 sec.
+Execute       db_write -model pool<2u, 50u, 8u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.adb -f 
+Command       db_write done; 0.281 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FC_1u_800u_500u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model FC<1u, 800u, 500u> -vendor xilinx -mg_file E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'B_COL_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'B_ROW_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'OFMDim_current_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'A_ROW_2' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_0' to 'FC_1u_800u_500u_sbXr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_0' to 'FC_1u_800u_500u_sbYs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_1' to 'FC_1u_800u_500u_sbZs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_1' to 'FC_1u_800u_500u_sb0s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_2' to 'FC_1u_800u_500u_sb1s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_2' to 'FC_1u_800u_500u_sb2s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_3' to 'FC_1u_800u_500u_sb3s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_3' to 'FC_1u_800u_500u_sb4t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_4' to 'FC_1u_800u_500u_sb5t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_4' to 'FC_1u_800u_500u_sb6t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_5' to 'FC_1u_800u_500u_sb7t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_5' to 'FC_1u_800u_500u_sb8t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_6' to 'FC_1u_800u_500u_sb9t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_6' to 'FC_1u_800u_500u_scau' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_7' to 'FC_1u_800u_500u_scbu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_7' to 'FC_1u_800u_500u_sccu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_8' to 'FC_1u_800u_500u_scdu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_8' to 'FC_1u_800u_500u_sceu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_9' to 'FC_1u_800u_500u_scfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_9' to 'FC_1u_800u_500u_scgu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_10' to 'FC_1u_800u_500u_schv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_10' to 'FC_1u_800u_500u_sciv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_11' to 'FC_1u_800u_500u_scjv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_11' to 'FC_1u_800u_500u_sckv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_12' to 'FC_1u_800u_500u_sclv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_12' to 'FC_1u_800u_500u_scmv' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_13' to 'FC_1u_800u_500u_scnw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_13' to 'FC_1u_800u_500u_scow' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_14' to 'FC_1u_800u_500u_scpw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_14' to 'FC_1u_800u_500u_scqw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_15' to 'FC_1u_800u_500u_scrw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_15' to 'FC_1u_800u_500u_scsw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_16' to 'FC_1u_800u_500u_sctx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_16' to 'FC_1u_800u_500u_scux' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_17' to 'FC_1u_800u_500u_scvx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_17' to 'FC_1u_800u_500u_scwx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_18' to 'FC_1u_800u_500u_scxx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_18' to 'FC_1u_800u_500u_scyx' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_19' to 'FC_1u_800u_500u_sczy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_19' to 'FC_1u_800u_500u_scAy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_20' to 'FC_1u_800u_500u_scBy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_20' to 'FC_1u_800u_500u_scCy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_21' to 'FC_1u_800u_500u_scDy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_21' to 'FC_1u_800u_500u_scEy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_22' to 'FC_1u_800u_500u_scFz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_22' to 'FC_1u_800u_500u_scGz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_23' to 'FC_1u_800u_500u_scHz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_23' to 'FC_1u_800u_500u_scIz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_A_V_1_24' to 'FC_1u_800u_500u_scJz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_800u_500u_s_B_V_1_24' to 'FC_1u_800u_500u_scKz' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_mac_muladd_bRq': 9 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_mac_muladd_bSr': 7 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FC_1u_800u_500u_s'.
+Command       create_rtl_model done; 1.303 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.419 seconds; current allocated memory: 295.000 MB.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       gen_rtl FC<1u, 800u, 500u> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/systemc/FC_1u_800u_500u_s -synmodules AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet 
+Execute       gen_rtl FC<1u, 800u, 500u> -style xilinx -f -lang vhdl -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/vhdl/FC_1u_800u_500u_s 
+Execute       gen_rtl FC<1u, 800u, 500u> -style xilinx -f -lang vlog -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/verilog/FC_1u_800u_500u_s 
+Execute       gen_tb_info FC<1u, 800u, 500u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s -p E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.18 sec.
+Execute       report -model FC<1u, 800u, 500u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/FC_1u_800u_500u_s_csynth.rpt -f 
+Command       report done; 0.204 sec.
+Execute       report -model FC<1u, 800u, 500u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/FC_1u_800u_500u_s_csynth.xml -f -x 
+Command       report done; 0.185 sec.
+Execute       report -model FC<1u, 800u, 500u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.verbose.rpt -verbose -f 
+Command       report done; 0.841 sec.
+Execute       db_write -model FC<1u, 800u, 500u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.adb -f 
+Command       db_write done; 0.66 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FC_1u_500u_10u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model FC<1u, 500u, 10u> -vendor xilinx -mg_file E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'B_COL_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'B_ROW_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'OFMDim_current_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'A_ROW_3' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_A_V_0' to 'FC_1u_500u_10u_s_cLz' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_B_V_0' to 'FC_1u_500u_10u_s_cMA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_A_V_196' to 'FC_1u_500u_10u_s_cNA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_B_V_199' to 'FC_1u_500u_10u_s_cOA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_A_V_297' to 'FC_1u_500u_10u_s_cPA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_B_V_2100' to 'FC_1u_500u_10u_s_cQA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_A_V_398' to 'FC_1u_500u_10u_s_cRA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_B_V_3101' to 'FC_1u_500u_10u_s_cSB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_A_V_4' to 'FC_1u_500u_10u_s_cTB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_B_V_4' to 'FC_1u_500u_10u_s_cUB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_A_V_5' to 'FC_1u_500u_10u_s_cVB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_B_V_5' to 'FC_1u_500u_10u_s_cWB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_A_V_6' to 'FC_1u_500u_10u_s_cXB' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_B_V_6' to 'FC_1u_500u_10u_s_cYC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_A_V_7' to 'FC_1u_500u_10u_s_cZC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_B_V_7' to 'FC_1u_500u_10u_s_c0C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_A_V_8' to 'FC_1u_500u_10u_s_c1C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_B_V_8' to 'FC_1u_500u_10u_s_c2C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_A_V_9' to 'FC_1u_500u_10u_s_c3C' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'FC_1u_500u_10u_s_B_V_9' to 'FC_1u_500u_10u_s_c4D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_urem_9ns_7ns_9_13_1' to 'lenet_urem_9ns_7nc5D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_mac_muladd_7ns_10s_6ns_10_1_1' to 'lenet_mac_muladd_c6D' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_mac_muladd_bRq': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_mac_muladd_bSr': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_mac_muladd_c6D': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_mul_mul_11nbUr': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_mul_mul_9nsbTr': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_urem_9ns_7nc5D': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FC_1u_500u_10u_s'.
+Command       create_rtl_model done; 0.805 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.656 seconds; current allocated memory: 298.529 MB.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       gen_rtl FC<1u, 500u, 10u> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/systemc/FC_1u_500u_10u_s -synmodules AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet 
+Execute       gen_rtl FC<1u, 500u, 10u> -style xilinx -f -lang vhdl -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/vhdl/FC_1u_500u_10u_s 
+Execute       gen_rtl FC<1u, 500u, 10u> -style xilinx -f -lang vlog -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/verilog/FC_1u_500u_10u_s 
+Execute       gen_tb_info FC<1u, 500u, 10u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s -p E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.102 sec.
+Execute       report -model FC<1u, 500u, 10u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/FC_1u_500u_10u_s_csynth.rpt -f 
+Command       report done; 0.113 sec.
+Execute       report -model FC<1u, 500u, 10u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/FC_1u_500u_10u_s_csynth.xml -f -x 
+Command       report done; 0.106 sec.
+Execute       report -model FC<1u, 500u, 10u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.verbose.rpt -verbose -f 
+Command       report done; 0.513 sec.
+Execute       db_write -model FC<1u, 500u, 10u> -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.adb -f 
+Command       db_write done; 0.459 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXI_DMA_MASTER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model AXI_DMA_MASTER -vendor xilinx -mg_file E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXI_DMA_MASTER'.
+INFO: [HLS 200-111]  Elapsed time: 1.853 seconds; current allocated memory: 299.690 MB.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       gen_rtl AXI_DMA_MASTER -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/systemc/AXI_DMA_MASTER -synmodules AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet 
+Execute       gen_rtl AXI_DMA_MASTER -style xilinx -f -lang vhdl -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/vhdl/AXI_DMA_MASTER 
+Execute       gen_rtl AXI_DMA_MASTER -style xilinx -f -lang vlog -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/verilog/AXI_DMA_MASTER 
+Execute       gen_tb_info AXI_DMA_MASTER -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER -p E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db 
+Execute       report -model AXI_DMA_MASTER -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/AXI_DMA_MASTER_csynth.rpt -f 
+Execute       report -model AXI_DMA_MASTER -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/AXI_DMA_MASTER_csynth.xml -f -x 
+Execute       report -model AXI_DMA_MASTER -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.verbose.rpt -verbose -f 
+Execute       db_write -model AXI_DMA_MASTER -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.adb -f 
+Command       db_write done; 0.192 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model lenet -vendor xilinx -mg_file E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet/in_stream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet/in_stream_V_last' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet/out_stream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet/out_stream_V_last' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'start_for_SMM_1u_25u_20u_U0' to 'start_for_SMM_1u_c7D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_pool_2u_20u_24u_U0' to 'start_for_pool_2uc8D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_SMM_1u_500u_50u_U0' to 'start_for_SMM_1u_c9D' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_pool_2u_50u_8u_U0' to 'start_for_pool_2udaE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_FC_1u_800u_500u_U0' to 'start_for_FC_1u_8dbE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_FC_1u_500u_10u_U0' to 'start_for_FC_1u_5dcE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_AXI_DMA_MASTER_U0' to 'start_for_AXI_DMAddE' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet'.
+Command       create_rtl_model done; 0.256 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.897 seconds; current allocated memory: 300.653 MB.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       gen_rtl lenet -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/systemc/lenet -synmodules AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet 
+Execute       gen_rtl lenet -istop -style xilinx -f -lang vhdl -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/vhdl/lenet 
+Execute       gen_rtl lenet -istop -style xilinx -f -lang vlog -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/verilog/lenet 
+Execute       export_constraint_db -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.constraint.tcl -f -tool general 
+Execute       report -model lenet -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.design.xml -verbose -f -dv 
+Command       report done; 1.652 sec.
+Execute       report -model lenet -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info lenet -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet -p E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db 
+Execute       report -model lenet -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/lenet_csynth.rpt -f 
+Execute       report -model lenet -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/syn/report/lenet_csynth.xml -f -x 
+Execute       report -model lenet -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.verbose.rpt -verbose -f 
+Command       report done; 1.321 sec.
+Execute       db_write -model lenet -o E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.adb -f 
+Command       db_write done; 0.188 sec.
+Execute       sc_get_clocks lenet 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain lenet 
+INFO-FLOW: Model list for RTL component generation: AXI_DMA_SLAVE SCIG.1 {SMM<1u, 25u, 20u>} {pool<2u, 20u, 24u>} SCIG {SMM<1u, 500u, 50u>} {pool<2u, 50u, 8u>} {FC<1u, 800u, 500u>} {FC<1u, 500u, 10u>} AXI_DMA_MASTER lenet
+INFO-FLOW: Handling components in module [AXI_DMA_SLAVE] ... 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.compgen.tcl 
+INFO-FLOW: Handling components in module [SCIG_1] ... 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.compgen.tcl 
+INFO-FLOW: Found component SCIG_1_inputBuf_V.
+INFO-FLOW: Append model SCIG_1_inputBuf_V
+INFO-FLOW: Handling components in module [SMM_1u_25u_20u_s] ... 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.compgen.tcl 
+INFO-FLOW: Found component lenet_mux_255_8_1_1.
+INFO-FLOW: Append model lenet_mux_255_8_1_1
+INFO-FLOW: Found component lenet_mac_muladd_Zio.
+INFO-FLOW: Append model lenet_mac_muladd_Zio
+INFO-FLOW: Found component SMM_1u_25u_20u_s_bkb.
+INFO-FLOW: Append model SMM_1u_25u_20u_s_bkb
+INFO-FLOW: Found component SMM_1u_25u_20u_s_Aem.
+INFO-FLOW: Append model SMM_1u_25u_20u_s_Aem
+INFO-FLOW: Handling components in module [pool_2u_20u_24u_s] ... 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.compgen.tcl 
+INFO-FLOW: Found component pool_2u_20u_24u_s0iy.
+INFO-FLOW: Append model pool_2u_20u_24u_s0iy
+INFO-FLOW: Found component pool_2u_20u_24u_s1iI.
+INFO-FLOW: Append model pool_2u_20u_24u_s1iI
+INFO-FLOW: Handling components in module [SCIG] ... 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.compgen.tcl 
+INFO-FLOW: Found component SCIG_inputBuf_V.
+INFO-FLOW: Append model SCIG_inputBuf_V
+INFO-FLOW: Found component SCIG_inElem_V.
+INFO-FLOW: Append model SCIG_inElem_V
+INFO-FLOW: Handling components in module [SMM_1u_500u_50u_s] ... 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.compgen.tcl 
+INFO-FLOW: Found component lenet_urem_9ns_6nbQq.
+INFO-FLOW: Append model lenet_urem_9ns_6nbQq
+INFO-FLOW: Found component lenet_mac_muladd_bRq.
+INFO-FLOW: Append model lenet_mac_muladd_bRq
+INFO-FLOW: Found component lenet_mac_muladd_bSr.
+INFO-FLOW: Append model lenet_mac_muladd_bSr
+INFO-FLOW: Found component lenet_mul_mul_9nsbTr.
+INFO-FLOW: Append model lenet_mul_mul_9nsbTr
+INFO-FLOW: Found component lenet_mul_mul_11nbUr.
+INFO-FLOW: Append model lenet_mul_mul_11nbUr
+INFO-FLOW: Found component SMM_1u_500u_50u_s3i2.
+INFO-FLOW: Append model SMM_1u_500u_50u_s3i2
+INFO-FLOW: Handling components in module [pool_2u_50u_8u_s] ... 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.compgen.tcl 
+INFO-FLOW: Found component pool_2u_50u_8u_s_bVr.
+INFO-FLOW: Append model pool_2u_50u_8u_s_bVr
+INFO-FLOW: Found component pool_2u_50u_8u_s_bWr.
+INFO-FLOW: Append model pool_2u_50u_8u_s_bWr
+INFO-FLOW: Handling components in module [FC_1u_800u_500u_s] ... 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.compgen.tcl 
+INFO-FLOW: Found component FC_1u_800u_500u_sbXr.
+INFO-FLOW: Append model FC_1u_800u_500u_sbXr
+INFO-FLOW: Found component FC_1u_800u_500u_sbYs.
+INFO-FLOW: Append model FC_1u_800u_500u_sbYs
+INFO-FLOW: Handling components in module [FC_1u_500u_10u_s] ... 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.compgen.tcl 
+INFO-FLOW: Found component lenet_urem_9ns_7nc5D.
+INFO-FLOW: Append model lenet_urem_9ns_7nc5D
+INFO-FLOW: Found component lenet_mac_muladd_c6D.
+INFO-FLOW: Append model lenet_mac_muladd_c6D
+INFO-FLOW: Found component FC_1u_500u_10u_s_cLz.
+INFO-FLOW: Append model FC_1u_500u_10u_s_cLz
+INFO-FLOW: Found component FC_1u_500u_10u_s_cMA.
+INFO-FLOW: Append model FC_1u_500u_10u_s_cMA
+INFO-FLOW: Handling components in module [AXI_DMA_MASTER] ... 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.compgen.tcl 
+INFO-FLOW: Handling components in module [lenet] ... 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.compgen.tcl 
+INFO-FLOW: Found component fifo_w32_d50_A.
+INFO-FLOW: Append model fifo_w32_d50_A
+INFO-FLOW: Found component fifo_w32_d50_A.
+INFO-FLOW: Append model fifo_w32_d50_A
+INFO-FLOW: Found component fifo_w32_d2_A.
+INFO-FLOW: Append model fifo_w32_d2_A
+INFO-FLOW: Found component fifo_w32_d50_A.
+INFO-FLOW: Append model fifo_w32_d50_A
+INFO-FLOW: Found component fifo_w32_d50_A.
+INFO-FLOW: Append model fifo_w32_d50_A
+INFO-FLOW: Found component fifo_w32_d2_A.
+INFO-FLOW: Append model fifo_w32_d2_A
+INFO-FLOW: Found component fifo_w32_d50_A.
+INFO-FLOW: Append model fifo_w32_d50_A
+INFO-FLOW: Found component fifo_w32_d50_A.
+INFO-FLOW: Append model fifo_w32_d50_A
+INFO-FLOW: Found component fifo_w32_d50_A.
+INFO-FLOW: Append model fifo_w32_d50_A
+INFO-FLOW: Found component start_for_SCIG_1_U0.
+INFO-FLOW: Append model start_for_SCIG_1_U0
+INFO-FLOW: Found component start_for_SMM_1u_c7D.
+INFO-FLOW: Append model start_for_SMM_1u_c7D
+INFO-FLOW: Found component start_for_pool_2uc8D.
+INFO-FLOW: Append model start_for_pool_2uc8D
+INFO-FLOW: Found component start_for_SCIG_U0.
+INFO-FLOW: Append model start_for_SCIG_U0
+INFO-FLOW: Found component start_for_SMM_1u_c9D.
+INFO-FLOW: Append model start_for_SMM_1u_c9D
+INFO-FLOW: Found component start_for_pool_2udaE.
+INFO-FLOW: Append model start_for_pool_2udaE
+INFO-FLOW: Found component start_for_FC_1u_8dbE.
+INFO-FLOW: Append model start_for_FC_1u_8dbE
+INFO-FLOW: Found component start_for_FC_1u_5dcE.
+INFO-FLOW: Append model start_for_FC_1u_5dcE
+INFO-FLOW: Found component start_for_AXI_DMAddE.
+INFO-FLOW: Append model start_for_AXI_DMAddE
+INFO-FLOW: Append model AXI_DMA_SLAVE
+INFO-FLOW: Append model SCIG_1
+INFO-FLOW: Append model SMM_1u_25u_20u_s
+INFO-FLOW: Append model pool_2u_20u_24u_s
+INFO-FLOW: Append model SCIG
+INFO-FLOW: Append model SMM_1u_500u_50u_s
+INFO-FLOW: Append model pool_2u_50u_8u_s
+INFO-FLOW: Append model FC_1u_800u_500u_s
+INFO-FLOW: Append model FC_1u_500u_10u_s
+INFO-FLOW: Append model AXI_DMA_MASTER
+INFO-FLOW: Append model lenet
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: SCIG_1_inputBuf_V lenet_mux_255_8_1_1 lenet_mac_muladd_Zio SMM_1u_25u_20u_s_bkb SMM_1u_25u_20u_s_Aem pool_2u_20u_24u_s0iy pool_2u_20u_24u_s1iI SCIG_inputBuf_V SCIG_inElem_V lenet_urem_9ns_6nbQq lenet_mac_muladd_bRq lenet_mac_muladd_bSr lenet_mul_mul_9nsbTr lenet_mul_mul_11nbUr SMM_1u_500u_50u_s3i2 pool_2u_50u_8u_s_bVr pool_2u_50u_8u_s_bWr FC_1u_800u_500u_sbXr FC_1u_800u_500u_sbYs lenet_urem_9ns_7nc5D lenet_mac_muladd_c6D FC_1u_500u_10u_s_cLz FC_1u_500u_10u_s_cMA fifo_w32_d50_A fifo_w32_d50_A fifo_w32_d2_A fifo_w32_d50_A fifo_w32_d50_A fifo_w32_d2_A fifo_w32_d50_A fifo_w32_d50_A fifo_w32_d50_A start_for_SCIG_1_U0 start_for_SMM_1u_c7D start_for_pool_2uc8D start_for_SCIG_U0 start_for_SMM_1u_c9D start_for_pool_2udaE start_for_FC_1u_8dbE start_for_FC_1u_5dcE start_for_AXI_DMAddE AXI_DMA_SLAVE SCIG_1 SMM_1u_25u_20u_s pool_2u_20u_24u_s SCIG SMM_1u_500u_50u_s pool_2u_50u_8u_s FC_1u_800u_500u_s FC_1u_500u_10u_s AXI_DMA_MASTER lenet
+INFO-FLOW: To file: write model SCIG_1_inputBuf_V
+INFO-FLOW: To file: write model lenet_mux_255_8_1_1
+INFO-FLOW: To file: write model lenet_mac_muladd_Zio
+INFO-FLOW: To file: write model SMM_1u_25u_20u_s_bkb
+INFO-FLOW: To file: write model SMM_1u_25u_20u_s_Aem
+INFO-FLOW: To file: write model pool_2u_20u_24u_s0iy
+INFO-FLOW: To file: write model pool_2u_20u_24u_s1iI
+INFO-FLOW: To file: write model SCIG_inputBuf_V
+INFO-FLOW: To file: write model SCIG_inElem_V
+INFO-FLOW: To file: write model lenet_urem_9ns_6nbQq
+INFO-FLOW: To file: write model lenet_mac_muladd_bRq
+INFO-FLOW: To file: write model lenet_mac_muladd_bSr
+INFO-FLOW: To file: write model lenet_mul_mul_9nsbTr
+INFO-FLOW: To file: write model lenet_mul_mul_11nbUr
+INFO-FLOW: To file: write model SMM_1u_500u_50u_s3i2
+INFO-FLOW: To file: write model pool_2u_50u_8u_s_bVr
+INFO-FLOW: To file: write model pool_2u_50u_8u_s_bWr
+INFO-FLOW: To file: write model FC_1u_800u_500u_sbXr
+INFO-FLOW: To file: write model FC_1u_800u_500u_sbYs
+INFO-FLOW: To file: write model lenet_urem_9ns_7nc5D
+INFO-FLOW: To file: write model lenet_mac_muladd_c6D
+INFO-FLOW: To file: write model FC_1u_500u_10u_s_cLz
+INFO-FLOW: To file: write model FC_1u_500u_10u_s_cMA
+INFO-FLOW: To file: write model fifo_w32_d50_A
+INFO-FLOW: To file: write model fifo_w32_d50_A
+INFO-FLOW: To file: write model fifo_w32_d2_A
+INFO-FLOW: To file: write model fifo_w32_d50_A
+INFO-FLOW: To file: write model fifo_w32_d50_A
+INFO-FLOW: To file: write model fifo_w32_d2_A
+INFO-FLOW: To file: write model fifo_w32_d50_A
+INFO-FLOW: To file: write model fifo_w32_d50_A
+INFO-FLOW: To file: write model fifo_w32_d50_A
+INFO-FLOW: To file: write model start_for_SCIG_1_U0
+INFO-FLOW: To file: write model start_for_SMM_1u_c7D
+INFO-FLOW: To file: write model start_for_pool_2uc8D
+INFO-FLOW: To file: write model start_for_SCIG_U0
+INFO-FLOW: To file: write model start_for_SMM_1u_c9D
+INFO-FLOW: To file: write model start_for_pool_2udaE
+INFO-FLOW: To file: write model start_for_FC_1u_8dbE
+INFO-FLOW: To file: write model start_for_FC_1u_5dcE
+INFO-FLOW: To file: write model start_for_AXI_DMAddE
+INFO-FLOW: To file: write model AXI_DMA_SLAVE
+INFO-FLOW: To file: write model SCIG_1
+INFO-FLOW: To file: write model SMM_1u_25u_20u_s
+INFO-FLOW: To file: write model pool_2u_20u_24u_s
+INFO-FLOW: To file: write model SCIG
+INFO-FLOW: To file: write model SMM_1u_500u_50u_s
+INFO-FLOW: To file: write model pool_2u_50u_8u_s
+INFO-FLOW: To file: write model FC_1u_800u_500u_s
+INFO-FLOW: To file: write model FC_1u_500u_10u_s
+INFO-FLOW: To file: write model AXI_DMA_MASTER
+INFO-FLOW: To file: write model lenet
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.102 sec.
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.153 sec.
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.157 sec.
+Command       ap_source done; 0.157 sec.
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'SCIG_1_inputBuf_V_ram (RAM)' using block RAMs.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'SMM_1u_25u_20u_s_bkb_ram (RAM_S2P_LUTRAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'SMM_1u_25u_20u_s_Aem_ram (RAM_S2P_LUTRAM)' using distributed RAMs with power-on initialization.
+Command       ap_source done; 0.207 sec.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'pool_2u_20u_24u_s0iy_ram (RAM_2P_LUTRAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'pool_2u_20u_24u_s1iI_ram (RAM_2P_LUTRAM)' using distributed RAMs.
+Command       ap_source done; 0.118 sec.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'SCIG_inputBuf_V_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'SCIG_inElem_V_ram (RAM_S2P_LUTRAM)' using distributed RAMs.
+Command       ap_source done; 0.118 sec.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.compgen.tcl 
+INFO: [RTMG 210-282] Generating pipelined core: 'lenet_urem_9ns_6nbQq_div'
+INFO: [RTMG 210-278] Implementing memory 'SMM_1u_500u_50u_s3i2_ram (RAM_S2P_LUTRAM)' using distributed RAMs with power-on initialization.
+Command       ap_source done; 0.398 sec.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'pool_2u_50u_8u_s_bVr_ram (RAM_2P_LUTRAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'pool_2u_50u_8u_s_bWr_ram (RAM_2P_LUTRAM)' using distributed RAMs.
+Command       ap_source done; 0.118 sec.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'FC_1u_800u_500u_sbXr_ram (RAM_S2P_LUTRAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'FC_1u_800u_500u_sbYs_ram (RAM_S2P_BRAM)' using block RAMs with power-on initialization.
+Command       ap_source done; 0.14 sec.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.compgen.tcl 
+INFO: [RTMG 210-282] Generating pipelined core: 'lenet_urem_9ns_7nc5D_div'
+INFO: [RTMG 210-278] Implementing memory 'FC_1u_500u_10u_s_cLz_ram (RAM_S2P_LUTRAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'FC_1u_500u_10u_s_cMA_ram (RAM_S2P_BRAM)' using block RAMs with power-on initialization.
+Command       ap_source done; 0.262 sec.
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.compgen.tcl 
+INFO: [RTMG 210-285] Implementing FIFO 'connect_0_V_V_U(fifo_w32_d50_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'connect_1_V_V_U(fifo_w32_d50_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'connect_2_V_V_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'connect_3_V_V_U(fifo_w32_d50_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'connect_4_V_V_U(fifo_w32_d50_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'connect_5_V_V_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'connect_6_V_V_U(fifo_w32_d50_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'connect_7_V_V_U(fifo_w32_d50_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'connect_8_V_V_U(fifo_w32_d50_A)' using Block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_SCIG_1_U0_U(start_for_SCIG_1_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_SMM_1u_c7D_U(start_for_SMM_1u_c7D)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_pool_2uc8D_U(start_for_pool_2uc8D)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_SCIG_U0_U(start_for_SCIG_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_SMM_1u_c9D_U(start_for_SMM_1u_c9D)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_pool_2udaE_U(start_for_pool_2udaE)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_FC_1u_8dbE_U(start_for_FC_1u_8dbE)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_FC_1u_5dcE_U(start_for_FC_1u_5dcE)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_AXI_DMAddE_U(start_for_AXI_DMAddE)' using Shift Registers.
+Command       ap_source done; 0.735 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.105 sec.
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.163 sec.
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.167 sec.
+Command       ap_source done; 0.167 sec.
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=lenet xml_exists=0
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.compgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.constraint.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=4
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=52 #gSsdmPorts=8
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.constraint.tcl 
+Execute       sc_get_clocks lenet 
+Execute       source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:57 ; elapsed = 00:01:26 . Memory (MB): peak = 421.895 ; gain = 336.512
+INFO: [SYSC 207-301] Generating SystemC RTL for lenet.
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet.
+Command     autosyn done; 59.397 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 85.338 sec.
+Command ap_source done; 85.744 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1 opened at Sat Aug 01 10:43:41 +0800 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source done; 0.157 sec.
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.149 sec.
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.375 sec.
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.384 sec.
+Command     ap_source done; 0.386 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Command     set_part done; 0.117 sec.
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.683 sec.
+Execute   export_design -rtl verilog -format ip_catalog 
+Execute     get_config_export -acc 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -ipname 
+Execute     get_config_export -kernel_drc 
+Execute     get_config_export -library 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -sdaccel 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_sdx -target 
+Execute     get_config_rtl -auto_prefix 
+Execute     get_config_sdx -target 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -tool vivado -rtl verilog -sdx-target none
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.131 sec.
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.193 sec.
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.197 sec.
+Command     ap_source done; 0.199 sec.
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.131 sec.
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.195 sec.
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.199 sec.
+Command     ap_source done; 0.199 sec.
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=lenet xml_exists=1
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.compgen.tcl 
+Command     ap_source done; 0.184 sec.
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_SLAVE.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG_1.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_25u_20u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_20u_24u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SCIG.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/SMM_1u_500u_50u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/pool_2u_50u_8u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_800u_500u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/FC_1u_500u_10u_s.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/AXI_DMA_MASTER.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.compgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.constraint.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=8
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=lenet
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=lenet
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.rtl_wrap.cfg.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.constraint.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.constraint.tcl 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/lenet.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       copy-tb-rtl-files
+INFO-FLOW: DBG:CMD:       copy-tb-data-files
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO-FLOW: DBG:CMD: read_platform_lib E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.145 sec.
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.148 sec.
+Command     ap_source done; 0.148 sec.
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:     exec E:/FPGA_projects/xup/lenet_op/lenet_op.prj/solution1/impl/ip/pack.bat
+Command   export_design done; 22.507 sec.
+Command ap_source done; 23.219 sec.
+Execute cleanup_all 

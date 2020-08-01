@@ -1,0 +1,314 @@
+
+
+================================================================
+== Vivado HLS Report for 'AXI_DMA_SLAVE'
+================================================================
+* Date:           Sat Aug  1 10:33:37 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        lenet_op.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.510|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    ?|    ?|         2|          1|          1|     ?|    yes   |
+        |- Loop 2  |    ?|    ?|         2|          1|          1|     ?|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-1: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 15
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 2, States = { 10 11 }
+  Pipeline-1 : II = 1, D = 2, States = { 14 15 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / (!tmp_s)
+	13  / (tmp_s)
+9 --> 
+	10  / true
+10 --> 
+	12  / (exitcond)
+	11  / (!exitcond)
+11 --> 
+	10  / true
+12 --> 
+13 --> 
+	14  / true
+14 --> 
+	12  / (exitcond6)
+	15  / (!exitcond6)
+15 --> 
+	14  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.63>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%empty = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %in_stream_V_data_V, i1* %in_stream_V_last)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:9]   --->   Operation 16 'read' 'empty' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue { i32, i1 } %empty, 0" [LeNet_wrapper/../hw_library/axi_dma_slave.h:9]   --->   Operation 17 'extractvalue' 'tmp_data_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_stream_V_V, i32 %tmp_data_V)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:11]   --->   Operation 18 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_1 : Operation 19 [1/1] (2.47ns)   --->   "%tmp_s = icmp eq i32 %tmp_data_V, 0" [LeNet_wrapper/../hw_library/axi_dma_slave.h:41]   --->   Operation 19 'icmp' 'tmp_s' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 3.63>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%empty_126 = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %in_stream_V_data_V, i1* %in_stream_V_last)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:13]   --->   Operation 20 'read' 'empty_126' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue { i32, i1 } %empty_126, 0" [LeNet_wrapper/../hw_library/axi_dma_slave.h:13]   --->   Operation 21 'extractvalue' 'tmp_data_V_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_stream_V_V, i32 %tmp_data_V_1)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:15]   --->   Operation 22 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 3 <SV = 2> <Delay = 3.63>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%empty_127 = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %in_stream_V_data_V, i1* %in_stream_V_last)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:17]   --->   Operation 23 'read' 'empty_127' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_data_V_2 = extractvalue { i32, i1 } %empty_127, 0" [LeNet_wrapper/../hw_library/axi_dma_slave.h:17]   --->   Operation 24 'extractvalue' 'tmp_data_V_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_stream_V_V, i32 %tmp_data_V_2)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:19]   --->   Operation 25 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 4 <SV = 3> <Delay = 3.63>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%empty_128 = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %in_stream_V_data_V, i1* %in_stream_V_last)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:21]   --->   Operation 26 'read' 'empty_128' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_data_V_3 = extractvalue { i32, i1 } %empty_128, 0" [LeNet_wrapper/../hw_library/axi_dma_slave.h:21]   --->   Operation 27 'extractvalue' 'tmp_data_V_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_stream_V_V, i32 %tmp_data_V_3)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:23]   --->   Operation 28 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 5 <SV = 4> <Delay = 3.63>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%empty_129 = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %in_stream_V_data_V, i1* %in_stream_V_last)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:25]   --->   Operation 29 'read' 'empty_129' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_data_V_4 = extractvalue { i32, i1 } %empty_129, 0" [LeNet_wrapper/../hw_library/axi_dma_slave.h:25]   --->   Operation 30 'extractvalue' 'tmp_data_V_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 31 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_stream_V_V, i32 %tmp_data_V_4)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:27]   --->   Operation 31 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 6 <SV = 5> <Delay = 3.63>
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%empty_130 = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %in_stream_V_data_V, i1* %in_stream_V_last)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:29]   --->   Operation 32 'read' 'empty_130' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_data_V_5 = extractvalue { i32, i1 } %empty_130, 0" [LeNet_wrapper/../hw_library/axi_dma_slave.h:29]   --->   Operation 33 'extractvalue' 'tmp_data_V_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 34 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_stream_V_V, i32 %tmp_data_V_5)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:31]   --->   Operation 34 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 7 <SV = 6> <Delay = 3.63>
+ST_7 : Operation 35 [1/1] (0.00ns)   --->   "%empty_131 = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %in_stream_V_data_V, i1* %in_stream_V_last)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:33]   --->   Operation 35 'read' 'empty_131' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_7 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_data_V_6 = extractvalue { i32, i1 } %empty_131, 0" [LeNet_wrapper/../hw_library/axi_dma_slave.h:33]   --->   Operation 36 'extractvalue' 'tmp_data_V_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 37 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_stream_V_V, i32 %tmp_data_V_6)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:35]   --->   Operation 37 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 8 <SV = 7> <Delay = 8.51>
+ST_8 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str105, i32 0, i32 0, [1 x i8]* @p_str106, [1 x i8]* @p_str107, [1 x i8]* @p_str108, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str109, [1 x i8]* @p_str110)"   --->   Operation 38 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_V_data_V, i1* %in_stream_V_last, [5 x i8]* @p_str5, i32 1, i32 1, [5 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind"   --->   Operation 39 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 40 [1/1] (0.00ns)   --->   "%empty_132 = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %in_stream_V_data_V, i1* %in_stream_V_last)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:37]   --->   Operation 40 'read' 'empty_132' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_8 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_data_V_7 = extractvalue { i32, i1 } %empty_132, 0" [LeNet_wrapper/../hw_library/axi_dma_slave.h:37]   --->   Operation 41 'extractvalue' 'tmp_data_V_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 42 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_stream_V_V, i32 %tmp_data_V_7)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:39]   --->   Operation 42 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_8 : Operation 43 [1/1] (0.00ns)   --->   "br i1 %tmp_s, label %1, label %4" [LeNet_wrapper/../hw_library/axi_dma_slave.h:41]   --->   Operation 43 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 44 [1/1] (8.51ns)   --->   "%tmp3 = mul i32 %tmp_data_V_2, %tmp_data_V_2" [LeNet_wrapper/../hw_library/axi_dma_slave.h:59]   --->   Operation 44 'mul' 'tmp3' <Predicate = (!tmp_s)> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 45 [1/1] (8.51ns)   --->   "%tmp4 = mul i32 %tmp_data_V_3, %tmp_data_V_5" [LeNet_wrapper/../hw_library/axi_dma_slave.h:59]   --->   Operation 45 'mul' 'tmp4' <Predicate = (!tmp_s)> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 46 [1/1] (8.51ns)   --->   "%tmp1 = mul i32 %tmp_data_V_3, %tmp_data_V_1" [LeNet_wrapper/../hw_library/axi_dma_slave.h:44]   --->   Operation 46 'mul' 'tmp1' <Predicate = (tmp_s)> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 47 [1/1] (8.51ns)   --->   "%tmp2 = mul i32 %tmp_data_V_4, %tmp_data_V_4" [LeNet_wrapper/../hw_library/axi_dma_slave.h:44]   --->   Operation 47 'mul' 'tmp2' <Predicate = (tmp_s)> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 8.51>
+ST_9 : Operation 48 [1/1] (8.51ns)   --->   "%KER_bound = mul i32 %tmp4, %tmp3" [LeNet_wrapper/../hw_library/axi_dma_slave.h:59]   --->   Operation 48 'mul' 'KER_bound' <Predicate = true> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 49 [1/1] (1.76ns)   --->   "br label %5" [LeNet_wrapper/../hw_library/axi_dma_slave.h:65]   --->   Operation 49 'br' <Predicate = true> <Delay = 1.76>
+
+State 10 <SV = 9> <Delay = 2.55>
+ST_10 : Operation 50 [1/1] (0.00ns)   --->   "%i1 = phi i32 [ 0, %4 ], [ %i_1, %6 ]"   --->   Operation 50 'phi' 'i1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 51 [1/1] (2.47ns)   --->   "%exitcond = icmp eq i32 %i1, %KER_bound" [LeNet_wrapper/../hw_library/axi_dma_slave.h:65]   --->   Operation 51 'icmp' 'exitcond' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 52 [1/1] (2.55ns)   --->   "%i_1 = add i32 %i1, 1" [LeNet_wrapper/../hw_library/axi_dma_slave.h:65]   --->   Operation 52 'add' 'i_1' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 53 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.loopexit.loopexit, label %6" [LeNet_wrapper/../hw_library/axi_dma_slave.h:65]   --->   Operation 53 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 54 [1/1] (0.00ns)   --->   "%empty_135 = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %in_stream_V_data_V, i1* %in_stream_V_last)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:67]   --->   Operation 54 'read' 'empty_135' <Predicate = (!exitcond)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_data_V_9 = extractvalue { i32, i1 } %empty_135, 0" [LeNet_wrapper/../hw_library/axi_dma_slave.h:67]   --->   Operation 55 'extractvalue' 'tmp_data_V_9' <Predicate = (!exitcond)> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 3.63>
+ST_11 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_91 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str2)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:65]   --->   Operation 56 'specregionbegin' 'tmp_91' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_11 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [LeNet_wrapper/../hw_library/axi_dma_slave.h:66]   --->   Operation 57 'specpipeline' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_11 : Operation 58 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_stream_V_V, i32 %tmp_data_V_9)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:68]   --->   Operation 58 'write' <Predicate = (!exitcond)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_11 : Operation 59 [1/1] (0.00ns)   --->   "%empty_136 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str2, i32 %tmp_91)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:69]   --->   Operation 59 'specregionend' 'empty_136' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_11 : Operation 60 [1/1] (0.00ns)   --->   "br label %5" [LeNet_wrapper/../hw_library/axi_dma_slave.h:65]   --->   Operation 60 'br' <Predicate = (!exitcond)> <Delay = 0.00>
+
+State 12 <SV = 10> <Delay = 0.00>
+ST_12 : Operation 61 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 61 'br' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_12 : Operation 62 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 62 'br' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_12 : Operation 63 [1/1] (0.00ns)   --->   "ret void" [LeNet_wrapper/../hw_library/axi_dma_slave.h:71]   --->   Operation 63 'ret' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 8> <Delay = 8.51>
+ST_13 : Operation 64 [1/1] (8.51ns)   --->   "%IFM_bound = mul i32 %tmp2, %tmp1" [LeNet_wrapper/../hw_library/axi_dma_slave.h:44]   --->   Operation 64 'mul' 'IFM_bound' <Predicate = true> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 65 [1/1] (1.76ns)   --->   "br label %2" [LeNet_wrapper/../hw_library/axi_dma_slave.h:50]   --->   Operation 65 'br' <Predicate = true> <Delay = 1.76>
+
+State 14 <SV = 9> <Delay = 2.55>
+ST_14 : Operation 66 [1/1] (0.00ns)   --->   "%i = phi i32 [ 0, %1 ], [ %i_11, %3 ]"   --->   Operation 66 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 67 [1/1] (2.47ns)   --->   "%exitcond6 = icmp eq i32 %i, %IFM_bound" [LeNet_wrapper/../hw_library/axi_dma_slave.h:50]   --->   Operation 67 'icmp' 'exitcond6' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 68 [1/1] (2.55ns)   --->   "%i_11 = add i32 %i, 1" [LeNet_wrapper/../hw_library/axi_dma_slave.h:50]   --->   Operation 68 'add' 'i_11' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 69 [1/1] (0.00ns)   --->   "br i1 %exitcond6, label %.loopexit.loopexit22, label %3" [LeNet_wrapper/../hw_library/axi_dma_slave.h:50]   --->   Operation 69 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 70 [1/1] (0.00ns)   --->   "%empty_133 = call { i32, i1 } @_ssdm_op_Read.axis.volatile.i32P.i1P(i32* %in_stream_V_data_V, i1* %in_stream_V_last)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:52]   --->   Operation 70 'read' 'empty_133' <Predicate = (!exitcond6)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_14 : Operation 71 [1/1] (0.00ns)   --->   "%tmp_data_V_8 = extractvalue { i32, i1 } %empty_133, 0" [LeNet_wrapper/../hw_library/axi_dma_slave.h:52]   --->   Operation 71 'extractvalue' 'tmp_data_V_8' <Predicate = (!exitcond6)> <Delay = 0.00>
+
+State 15 <SV = 10> <Delay = 3.63>
+ST_15 : Operation 72 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:50]   --->   Operation 72 'specregionbegin' 'tmp' <Predicate = (!exitcond6)> <Delay = 0.00>
+ST_15 : Operation 73 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [LeNet_wrapper/../hw_library/axi_dma_slave.h:51]   --->   Operation 73 'specpipeline' <Predicate = (!exitcond6)> <Delay = 0.00>
+ST_15 : Operation 74 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_stream_V_V, i32 %tmp_data_V_8)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:53]   --->   Operation 74 'write' <Predicate = (!exitcond6)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_15 : Operation 75 [1/1] (0.00ns)   --->   "%empty_134 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str, i32 %tmp)" [LeNet_wrapper/../hw_library/axi_dma_slave.h:54]   --->   Operation 75 'specregionend' 'empty_134' <Predicate = (!exitcond6)> <Delay = 0.00>
+ST_15 : Operation 76 [1/1] (0.00ns)   --->   "br label %2" [LeNet_wrapper/../hw_library/axi_dma_slave.h:50]   --->   Operation 76 'br' <Predicate = (!exitcond6)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	axis read on port 'in_stream_V_data_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:9) [6]  (0 ns)
+	fifo write on port 'out_stream_V_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:11) [8]  (3.63 ns)
+
+ <State 2>: 3.63ns
+The critical path consists of the following:
+	axis read on port 'in_stream_V_data_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:13) [9]  (0 ns)
+	fifo write on port 'out_stream_V_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:15) [11]  (3.63 ns)
+
+ <State 3>: 3.63ns
+The critical path consists of the following:
+	axis read on port 'in_stream_V_data_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:17) [12]  (0 ns)
+	fifo write on port 'out_stream_V_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:19) [14]  (3.63 ns)
+
+ <State 4>: 3.63ns
+The critical path consists of the following:
+	axis read on port 'in_stream_V_data_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:21) [15]  (0 ns)
+	fifo write on port 'out_stream_V_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:23) [17]  (3.63 ns)
+
+ <State 5>: 3.63ns
+The critical path consists of the following:
+	axis read on port 'in_stream_V_data_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:25) [18]  (0 ns)
+	fifo write on port 'out_stream_V_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:27) [20]  (3.63 ns)
+
+ <State 6>: 3.63ns
+The critical path consists of the following:
+	axis read on port 'in_stream_V_data_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:29) [21]  (0 ns)
+	fifo write on port 'out_stream_V_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:31) [23]  (3.63 ns)
+
+ <State 7>: 3.63ns
+The critical path consists of the following:
+	axis read on port 'in_stream_V_data_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:33) [24]  (0 ns)
+	fifo write on port 'out_stream_V_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:35) [26]  (3.63 ns)
+
+ <State 8>: 8.51ns
+The critical path consists of the following:
+	'mul' operation ('tmp3', LeNet_wrapper/../hw_library/axi_dma_slave.h:59) [33]  (8.51 ns)
+
+ <State 9>: 8.51ns
+The critical path consists of the following:
+	'mul' operation ('KER_bound', LeNet_wrapper/../hw_library/axi_dma_slave.h:59) [35]  (8.51 ns)
+
+ <State 10>: 2.55ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', LeNet_wrapper/../hw_library/axi_dma_slave.h:65) [38]  (0 ns)
+	'add' operation ('i', LeNet_wrapper/../hw_library/axi_dma_slave.h:65) [40]  (2.55 ns)
+
+ <State 11>: 3.63ns
+The critical path consists of the following:
+	fifo write on port 'out_stream_V_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:68) [47]  (3.63 ns)
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 8.51ns
+The critical path consists of the following:
+	'mul' operation ('IFM_bound', LeNet_wrapper/../hw_library/axi_dma_slave.h:44) [55]  (8.51 ns)
+
+ <State 14>: 2.55ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', LeNet_wrapper/../hw_library/axi_dma_slave.h:50) [58]  (0 ns)
+	'add' operation ('i', LeNet_wrapper/../hw_library/axi_dma_slave.h:50) [60]  (2.55 ns)
+
+ <State 15>: 3.63ns
+The critical path consists of the following:
+	fifo write on port 'out_stream_V_V' (LeNet_wrapper/../hw_library/axi_dma_slave.h:53) [67]  (3.63 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

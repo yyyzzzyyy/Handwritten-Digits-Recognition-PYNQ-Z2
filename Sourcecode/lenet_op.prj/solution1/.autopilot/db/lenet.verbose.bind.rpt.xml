@@ -1,0 +1,55 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'lenet'" level="0">
+<item name = "Date">Sat Aug  1 10:34:04 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">lenet_op.prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 10.623, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_SMM_1u_500u_50u_s_fu_624">SMM_1u_500u_50u_s, ?, ?, ?, ?, none</column>
+<column name="grp_FC_1u_800u_500u_s_fu_738">FC_1u_800u_500u_s, ?, ?, ?, ?, none</column>
+<column name="grp_SCIG_fu_852">SCIG, ?, ?, ?, ?, none</column>
+<column name="grp_FC_1u_500u_10u_s_fu_858">FC_1u_500u_10u_s, ?, ?, ?, ?, none</column>
+<column name="grp_pool_2u_20u_24u_s_fu_912">pool_2u_20u_24u_s, ?, ?, ?, ?, none</column>
+<column name="grp_pool_2u_50u_8u_s_fu_922">pool_2u_50u_8u_s, ?, ?, ?, ?, none</column>
+<column name="grp_SMM_1u_25u_20u_s_fu_932">SMM_1u_25u_20u_s, ?, ?, ?, ?, none</column>
+<column name="grp_SCIG_1_fu_1046">SCIG_1, ?, ?, ?, ?, none</column>
+<column name="grp_AXI_DMA_MASTER_fu_1052">AXI_DMA_MASTER, ?, ?, ?, ?, none</column>
+<column name="grp_AXI_DMA_SLAVE_fu_1061">AXI_DMA_SLAVE, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

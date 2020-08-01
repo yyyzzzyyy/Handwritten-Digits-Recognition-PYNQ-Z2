@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="LeNet_wrapper.cpp" path="E:\FPGA_projects\xup\lenet_op\LeNet_wrapper\LeNet_wrapper.cpp"/>
+    <originFiles name="LeNet_wrapper.h" path="E:\FPGA_projects\xup\lenet_op\LeNet_wrapper\LeNet_wrapper.h"/>
+    <originFiles name="config.h" path="E:\FPGA_projects\xup\lenet_op\LeNet_wrapper\config.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

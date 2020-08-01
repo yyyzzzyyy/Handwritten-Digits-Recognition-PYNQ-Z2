@@ -1,0 +1,36 @@
+digraph ap_test {
+	graph [splines=ortho, rankdir=BT, size="500, 500"];
+	node [label="\N"];
+	graph [bb="0,0,341,1872"];
+	1 [shape=box, fixedsize=true, width="2.25", height="0.25", pos="90,9"];
+	2 [shape=box, fixedsize=true, width=2, height="0.25", pos="261,9"];
+	3 [shape=box, fixedsize=true, width="2.375", height="0.25", pos="85,1863"];
+	4 [shape=box, fixedsize=true, width="2.125", height="0.25", pos="265,1863"];
+	231 [shape=box, fixedsize=true, width="1.8611", height=2, pos="175,126"];
+	232 [shape=box, fixedsize=true, width="1.75", height=2, pos="175,306"];
+	233 [shape=box, fixedsize=true, width="1.9861", height=2, pos="175,486"];
+	234 [shape=box, fixedsize=true, width="2.0972", height=2, pos="175,666"];
+	235 [shape=box, fixedsize=true, width="1.75", height=2, pos="175,846"];
+	236 [shape=box, fixedsize=true, width="2.0972", height=2, pos="175,1026"];
+	237 [shape=box, fixedsize=true, width="1.9861", height=2, pos="175,1206"];
+	238 [shape=box, fixedsize=true, width="2.0972", height=2, pos="175,1386"];
+	239 [shape=box, fixedsize=true, width="1.9861", height=2, pos="175,1566"];
+	240 [shape=box, fixedsize=true, width="1.9861", height=2, pos="175,1746"];
+	1 -> 231 [pos="e,139.5,53.744 139.5,18.181 139.5,18.181 139.5,43.744 139.5,43.744"];
+	2 -> 231 [pos="e,215.5,53.744 215.5,18.181 215.5,18.181 215.5,43.744 215.5,43.744"];
+	240 -> 3 [pos="e,137,1853.9 137,1818.1 137,1818.1 137,1843.9 137,1843.9"];
+	240 -> 4 [pos="e,217.5,1853.9 217.5,1818.1 217.5,1818.1 217.5,1843.9 217.5,1843.9"];
+	231 -> 232 [pos="e,175,233.81 175,198.18 175,198.18 175,223.81 175,223.81"];
+	232 -> 233 [pos="e,175,413.81 175,378.18 175,378.18 175,403.81 175,403.81"];
+	233 -> 234 [pos="e,175,593.81 175,558.18 175,558.18 175,583.81 175,583.81"];
+	234 -> 235 [pos="e,175,773.81 175,738.18 175,738.18 175,763.81 175,763.81"];
+	235 -> 236 [pos="e,175,953.81 175,918.18 175,918.18 175,943.81 175,943.81"];
+	236 -> 237 [pos="e,175,1133.8 175,1098.2 175,1098.2 175,1123.8 175,1123.8"];
+	237 -> 238 [pos="e,175,1313.8 175,1278.2 175,1278.2 175,1303.8 175,1303.8"];
+	238 -> 239 [pos="e,175,1493.8 175,1458.2 175,1458.2 175,1483.8 175,1483.8"];
+	239 -> 240 [pos="e,175,1673.8 175,1638.2 175,1638.2 175,1663.8 175,1663.8"];
+}
+Warning: node '1', graph 'ap_test' size too small for label
+Warning: node '2', graph 'ap_test' size too small for label
+Warning: node '3', graph 'ap_test' size too small for label
+Warning: node '4', graph 'ap_test' size too small for label

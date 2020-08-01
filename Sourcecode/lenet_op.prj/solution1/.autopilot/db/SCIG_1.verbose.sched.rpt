@@ -1,0 +1,429 @@
+
+
+================================================================
+== Vivado HLS Report for 'SCIG_1'
+================================================================
+* Date:           Sat Aug  1 10:33:38 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        lenet_op.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.750|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    ?|    ?|         4|          1|          1|     ?|    yes   |
+        |- Loop 2  |    ?|    ?|         2|          1|          1|     ?|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-1: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 17
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 2, States = { 10 11 }
+  Pipeline-1 : II = 1, D = 4, States = { 13 14 15 16 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / (!tmp_s)
+	13  / (tmp_s)
+9 --> 
+	10  / true
+10 --> 
+	12  / (exitcond)
+	11  / (!exitcond)
+11 --> 
+	10  / true
+12 --> 
+13 --> 
+	17  / (exitcond1)
+	14  / (!exitcond1)
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	13  / true
+17 --> 
+	12  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.26>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%IFMPadDimSqrt = alloca i11, align 2" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:109]   --->   Operation 18 'alloca' 'IFMPadDimSqrt' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%inputBuf_V = alloca [10500 x i8], align 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:113]   --->   Operation 19 'alloca' 'inputBuf_V' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 10500> <RAM>
+ST_1 : Operation 20 [1/1] (3.63ns)   --->   "%tmp_V = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_V_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:72]   --->   Operation 20 'read' 'tmp_V' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_1 : Operation 21 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_V_V, i32 %tmp_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:74]   --->   Operation 21 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_1 : Operation 22 [1/1] (2.47ns)   --->   "%tmp_s = icmp eq i32 %tmp_V, 0" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:104]   --->   Operation 22 'icmp' 'tmp_s' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 7.26>
+ST_2 : Operation 23 [1/1] (3.63ns)   --->   "%tmp_V_84 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_V_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:76]   --->   Operation 23 'read' 'tmp_V_84' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_2 : Operation 24 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_V_V, i32 %tmp_V_84)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:78]   --->   Operation 24 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 3 <SV = 2> <Delay = 7.26>
+ST_3 : Operation 25 [1/1] (3.63ns)   --->   "%tmp_V_86 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_V_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:80]   --->   Operation 25 'read' 'tmp_V_86' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_3 : Operation 26 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_V_V, i32 %tmp_V_86)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:82]   --->   Operation 26 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 4 <SV = 3> <Delay = 7.26>
+ST_4 : Operation 27 [1/1] (3.63ns)   --->   "%tmp_V_88 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_V_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:84]   --->   Operation 27 'read' 'tmp_V_88' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_4 : Operation 28 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_V_V, i32 %tmp_V_88)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:86]   --->   Operation 28 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 5 <SV = 4> <Delay = 7.26>
+ST_5 : Operation 29 [1/1] (3.63ns)   --->   "%tmp_V_90 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_V_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:88]   --->   Operation 29 'read' 'tmp_V_90' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_5 : Operation 30 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_V_V, i32 %tmp_V_90)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:90]   --->   Operation 30 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 6 <SV = 5> <Delay = 7.26>
+ST_6 : Operation 31 [1/1] (3.63ns)   --->   "%tmp_V_92 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_V_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:92]   --->   Operation 31 'read' 'tmp_V_92' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_6 : Operation 32 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_V_V, i32 %tmp_V_92)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:94]   --->   Operation 32 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 7 <SV = 6> <Delay = 7.26>
+ST_7 : Operation 33 [1/1] (3.63ns)   --->   "%tmp_V_94 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_V_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:96]   --->   Operation 33 'read' 'tmp_V_94' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_7 : Operation 34 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_V_V, i32 %tmp_V_94)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:98]   --->   Operation 34 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 8 <SV = 7> <Delay = 8.51>
+ST_8 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %out_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str112, i32 0, i32 0, [1 x i8]* @p_str113, [1 x i8]* @p_str114, [1 x i8]* @p_str115, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str116, [1 x i8]* @p_str117)"   --->   Operation 35 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str105, i32 0, i32 0, [1 x i8]* @p_str106, [1 x i8]* @p_str107, [1 x i8]* @p_str108, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str109, [1 x i8]* @p_str110)"   --->   Operation 36 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 37 [1/1] (3.63ns)   --->   "%tmp_V_96 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_V_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:100]   --->   Operation 37 'read' 'tmp_V_96' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_8 : Operation 38 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_V_V, i32 %tmp_V_96)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:102]   --->   Operation 38 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_8 : Operation 39 [1/1] (0.00ns)   --->   "br i1 %tmp_s, label %1, label %9" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:104]   --->   Operation 39 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 40 [1/1] (8.51ns)   --->   "%tmp4 = mul i32 %tmp_V_86, %tmp_V_86" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:193]   --->   Operation 40 'mul' 'tmp4' <Predicate = (!tmp_s)> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 41 [1/1] (8.51ns)   --->   "%tmp5 = mul i32 %tmp_V_88, %tmp_V_92" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:193]   --->   Operation 41 'mul' 'tmp5' <Predicate = (!tmp_s)> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 42 [1/1] (0.00ns)   --->   "%oy = alloca i32"   --->   Operation 42 'alloca' 'oy' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_8 : Operation 43 [1/1] (0.00ns)   --->   "%ox = alloca i32"   --->   Operation 43 'alloca' 'ox' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_8 : Operation 44 [1/1] (0.00ns)   --->   "%ky = alloca i32"   --->   Operation 44 'alloca' 'ky' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_8 : Operation 45 [1/1] (0.00ns)   --->   "%inp_j = alloca i32"   --->   Operation 45 'alloca' 'inp_j' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_8 : Operation 46 [1/1] (0.00ns)   --->   "%inp_i = alloca i32"   --->   Operation 46 'alloca' 'inp_i' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_8 : Operation 47 [1/1] (0.00ns)   --->   "%kx = alloca i32"   --->   Operation 47 'alloca' 'kx' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_8 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_67 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str45)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:104]   --->   Operation 48 'specregionbegin' 'tmp_67' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_8 : Operation 49 [1/1] (0.00ns)   --->   "store i11 784, i11* %IFMPadDimSqrt, align 2" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:109]   --->   Operation 49 'store' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_8 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecFUCore(i11* %IFMPadDimSqrt, [1 x i8]* @p_str1, [8 x i8]* @p_str32, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:110]   --->   Operation 50 'specfucore' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_8 : Operation 51 [1/1] (8.51ns)   --->   "%tmp_68 = mul i32 %tmp_V_84, 14568" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:129]   --->   Operation 51 'mul' 'tmp_68' <Predicate = (tmp_s)> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 52 [1/1] (1.76ns)   --->   "store i32 0, i32* %kx"   --->   Operation 52 'store' <Predicate = (tmp_s)> <Delay = 1.76>
+ST_8 : Operation 53 [1/1] (1.76ns)   --->   "store i32 0, i32* %inp_i"   --->   Operation 53 'store' <Predicate = (tmp_s)> <Delay = 1.76>
+ST_8 : Operation 54 [1/1] (1.76ns)   --->   "store i32 0, i32* %inp_j"   --->   Operation 54 'store' <Predicate = (tmp_s)> <Delay = 1.76>
+ST_8 : Operation 55 [1/1] (1.76ns)   --->   "store i32 0, i32* %ky"   --->   Operation 55 'store' <Predicate = (tmp_s)> <Delay = 1.76>
+ST_8 : Operation 56 [1/1] (1.76ns)   --->   "store i32 0, i32* %ox"   --->   Operation 56 'store' <Predicate = (tmp_s)> <Delay = 1.76>
+ST_8 : Operation 57 [1/1] (1.76ns)   --->   "store i32 0, i32* %oy"   --->   Operation 57 'store' <Predicate = (tmp_s)> <Delay = 1.76>
+ST_8 : Operation 58 [1/1] (1.76ns)   --->   "br label %2" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:129]   --->   Operation 58 'br' <Predicate = (tmp_s)> <Delay = 1.76>
+
+State 9 <SV = 8> <Delay = 8.51>
+ST_9 : Operation 59 [1/1] (8.51ns)   --->   "%KER_bound = mul i32 %tmp5, %tmp4" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:193]   --->   Operation 59 'mul' 'KER_bound' <Predicate = true> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 60 [1/1] (1.76ns)   --->   "br label %10" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:199]   --->   Operation 60 'br' <Predicate = true> <Delay = 1.76>
+
+State 10 <SV = 9> <Delay = 2.55>
+ST_10 : Operation 61 [1/1] (0.00ns)   --->   "%i6 = phi i32 [ 0, %9 ], [ %i_5, %11 ]"   --->   Operation 61 'phi' 'i6' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 62 [1/1] (2.47ns)   --->   "%exitcond = icmp eq i32 %i6, %KER_bound" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:199]   --->   Operation 62 'icmp' 'exitcond' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 63 [1/1] (2.55ns)   --->   "%i_5 = add i32 %i6, 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:199]   --->   Operation 63 'add' 'i_5' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 64 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.loopexit.loopexit, label %11" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:199]   --->   Operation 64 'br' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 7.26>
+ST_11 : Operation 65 [1/1] (0.00ns)   --->   "%tmp_71 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str48)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:199]   --->   Operation 65 'specregionbegin' 'tmp_71' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_11 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:200]   --->   Operation 66 'specpipeline' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_11 : Operation 67 [1/1] (3.63ns)   --->   "%tmp_V_98 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_V_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:201]   --->   Operation 67 'read' 'tmp_V_98' <Predicate = (!exitcond)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_11 : Operation 68 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_V_V, i32 %tmp_V_98)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:202]   --->   Operation 68 'write' <Predicate = (!exitcond)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_11 : Operation 69 [1/1] (0.00ns)   --->   "%empty_112 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str48, i32 %tmp_71)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:203]   --->   Operation 69 'specregionend' 'empty_112' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_11 : Operation 70 [1/1] (0.00ns)   --->   "br label %10" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:199]   --->   Operation 70 'br' <Predicate = (!exitcond)> <Delay = 0.00>
+
+State 12 <SV = 10> <Delay = 0.00>
+ST_12 : Operation 71 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 71 'br' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_12 : Operation 72 [1/1] (0.00ns)   --->   "ret void" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:205]   --->   Operation 72 'ret' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 8> <Delay = 8.75>
+ST_13 : Operation 73 [1/1] (0.00ns)   --->   "%inp = phi i32 [ 0, %1 ], [ %inp_6, %._crit_edge228 ]" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180]   --->   Operation 73 'phi' 'inp' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 74 [1/1] (0.00ns)   --->   "%i = phi i32 [ 0, %1 ], [ %i_6, %._crit_edge228 ]"   --->   Operation 74 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 75 [1/1] (2.47ns)   --->   "%exitcond1 = icmp eq i32 %i, %tmp_68" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:129]   --->   Operation 75 'icmp' 'exitcond1' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 76 [1/1] (2.55ns)   --->   "%i_6 = add i32 %i, 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:129]   --->   Operation 76 'add' 'i_6' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 77 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %8, label %3" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:129]   --->   Operation 77 'br' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_69 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str46)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:129]   --->   Operation 78 'specregionbegin' 'tmp_69' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_13 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:130]   --->   Operation 79 'specpipeline' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_13 : Operation 80 [1/1] (0.00ns)   --->   "%IFMPadDimSqrt_load = load i11* %IFMPadDimSqrt, align 2"   --->   Operation 80 'load' 'IFMPadDimSqrt_load' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_13 : Operation 81 [1/1] (0.00ns)   --->   "%extLd = sext i11 %IFMPadDimSqrt_load to i32"   --->   Operation 81 'sext' 'extLd' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_13 : Operation 82 [1/1] (2.47ns)   --->   "%tmp_70 = icmp ult i32 %inp, %extLd" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:133]   --->   Operation 82 'icmp' 'tmp_70' <Predicate = (!exitcond1)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 83 [1/1] (1.76ns)   --->   "br i1 %tmp_70, label %4, label %._crit_edge" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:133]   --->   Operation 83 'br' <Predicate = (!exitcond1)> <Delay = 1.76>
+ST_13 : Operation 84 [1/1] (0.00ns)   --->   "%inp_j_load_1 = load i32* %inp_j" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:137]   --->   Operation 84 'load' 'inp_j_load_1' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.00>
+ST_13 : Operation 85 [1/1] (0.00ns)   --->   "%inp_i_load_1 = load i32* %inp_i" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:137]   --->   Operation 85 'load' 'inp_i_load_1' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.00>
+ST_13 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node or_cond2)   --->   "%tmp_72 = or i32 %inp_j_load_1, %inp_i_load_1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:137]   --->   Operation 86 'or' 'tmp_72' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 87 [1/1] (0.00ns) (grouped into LUT with out node or_cond2)   --->   "%tmp_81 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %tmp_72, i32 31)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:137]   --->   Operation 87 'bitselect' 'tmp_81' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.00>
+ST_13 : Operation 88 [1/1] (2.47ns)   --->   "%tmp_73 = icmp ugt i32 %inp_i_load_1, 27" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:137]   --->   Operation 88 'icmp' 'tmp_73' <Predicate = (!exitcond1 & tmp_70)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 89 [1/1] (2.47ns)   --->   "%tmp_74 = icmp ugt i32 %inp_j_load_1, 27" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:137]   --->   Operation 89 'icmp' 'tmp_74' <Predicate = (!exitcond1 & tmp_70)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node or_cond2)   --->   "%tmp1 = or i1 %tmp_73, %tmp_74" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:137]   --->   Operation 90 'or' 'tmp1' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 91 [1/1] (0.99ns) (out node of the LUT)   --->   "%or_cond2 = or i1 %tmp1, %tmp_81" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:137]   --->   Operation 91 'or' 'or_cond2' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 92 [1/1] (1.76ns)   --->   "br i1 %or_cond2, label %.critedge_ifconv, label %.preheader" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:137]   --->   Operation 92 'br' <Predicate = (!exitcond1 & tmp_70)> <Delay = 1.76>
+ST_13 : Operation 93 [1/1] (0.00ns)   --->   "%inp_j_load = load i32* %inp_j" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:152]   --->   Operation 93 'load' 'inp_j_load' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.00>
+ST_13 : Operation 94 [1/1] (0.00ns)   --->   "%inp_i_load = load i32* %inp_i" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:155]   --->   Operation 94 'load' 'inp_i_load' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.00>
+ST_13 : Operation 95 [1/1] (2.55ns)   --->   "%inp_2 = add i32 %inp, 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:151]   --->   Operation 95 'add' 'inp_2' <Predicate = (!exitcond1 & tmp_70)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 96 [1/1] (2.55ns)   --->   "%inp_j_2 = add nsw i32 %inp_j_load, 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:152]   --->   Operation 96 'add' 'inp_j_2' <Predicate = (!exitcond1 & tmp_70)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 97 [1/1] (2.47ns)   --->   "%tmp_76 = icmp eq i32 %inp_j_2, 28" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:153]   --->   Operation 97 'icmp' 'tmp_76' <Predicate = (!exitcond1 & tmp_70)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 98 [1/1] (2.55ns)   --->   "%inp_i_1 = add nsw i32 %inp_i_load, 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:155]   --->   Operation 98 'add' 'inp_i_1' <Predicate = (!exitcond1 & tmp_70)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 99 [1/1] (2.47ns)   --->   "%tmp_77 = icmp eq i32 %inp_i_1, 28" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:156]   --->   Operation 99 'icmp' 'tmp_77' <Predicate = (!exitcond1 & tmp_70)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 100 [1/1] (0.00ns) (grouped into LUT with out node inp_i_2)   --->   "%p_s = select i1 %tmp_77, i32 0, i32 %inp_i_1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:156]   --->   Operation 100 'select' 'p_s' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 101 [1/1] (0.69ns) (out node of the LUT)   --->   "%inp_i_2 = select i1 %tmp_76, i32 %p_s, i32 %inp_i_load" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:153]   --->   Operation 101 'select' 'inp_i_2' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 102 [1/1] (0.69ns)   --->   "%inp_j_1 = select i1 %tmp_76, i32 0, i32 %inp_j_2" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:152]   --->   Operation 102 'select' 'inp_j_1' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 103 [1/1] (1.76ns)   --->   "store i32 %inp_i_2, i32* %inp_i" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:153]   --->   Operation 103 'store' <Predicate = (!exitcond1 & tmp_70)> <Delay = 1.76>
+ST_13 : Operation 104 [1/1] (1.76ns)   --->   "store i32 %inp_j_1, i32* %inp_j" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:152]   --->   Operation 104 'store' <Predicate = (!exitcond1 & tmp_70)> <Delay = 1.76>
+ST_13 : Operation 105 [1/1] (1.76ns)   --->   "br label %._crit_edge" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:160]   --->   Operation 105 'br' <Predicate = (!exitcond1 & tmp_70)> <Delay = 1.76>
+ST_13 : Operation 106 [1/1] (0.00ns)   --->   "%inp_1 = phi i32 [ %inp_2, %.critedge_ifconv ], [ %inp, %3 ]"   --->   Operation 106 'phi' 'inp_1' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_13 : Operation 107 [1/1] (2.47ns)   --->   "%tmp_78 = icmp ugt i32 %inp_1, 168" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:161]   --->   Operation 107 'icmp' 'tmp_78' <Predicate = (!exitcond1)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 108 [1/1] (1.76ns)   --->   "br i1 %tmp_78, label %.critedge232, label %._crit_edge228" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:161]   --->   Operation 108 'br' <Predicate = (!exitcond1)> <Delay = 1.76>
+ST_13 : Operation 109 [1/1] (0.00ns)   --->   "%oy_load_1 = load i32* %oy"   --->   Operation 109 'load' 'oy_load_1' <Predicate = (!exitcond1 & tmp_78)> <Delay = 0.00>
+ST_13 : Operation 110 [1/1] (0.00ns)   --->   "%ox_load_1 = load i32* %ox" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:167]   --->   Operation 110 'load' 'ox_load_1' <Predicate = (!exitcond1 & tmp_78)> <Delay = 0.00>
+ST_13 : Operation 111 [1/1] (0.00ns)   --->   "%ky_load = load i32* %ky"   --->   Operation 111 'load' 'ky_load' <Predicate = (!exitcond1 & tmp_78)> <Delay = 0.00>
+ST_13 : Operation 112 [1/1] (0.00ns)   --->   "%kx_load = load i32* %kx" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:170]   --->   Operation 112 'load' 'kx_load' <Predicate = (!exitcond1 & tmp_78)> <Delay = 0.00>
+ST_13 : Operation 113 [1/1] (2.55ns)   --->   "%tmp = add i32 %oy_load_1, %ky_load"   --->   Operation 113 'add' 'tmp' <Predicate = (!exitcond1 & tmp_78)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 114 [1/1] (2.55ns)   --->   "%kx_1 = add i32 1, %kx_load" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:170]   --->   Operation 114 'add' 'kx_1' <Predicate = (!exitcond1 & tmp_78)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 115 [1/1] (2.47ns)   --->   "%tmp_83 = icmp eq i32 %kx_1, 5" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:171]   --->   Operation 115 'icmp' 'tmp_83' <Predicate = (!exitcond1 & tmp_78)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 116 [1/1] (0.00ns)   --->   "br i1 %tmp_83, label %5, label %.critedge232.._crit_edge228_crit_edge" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:171]   --->   Operation 116 'br' <Predicate = (!exitcond1 & tmp_78)> <Delay = 0.00>
+ST_13 : Operation 117 [1/1] (1.76ns)   --->   "store i32 %kx_1, i32* %kx" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:170]   --->   Operation 117 'store' <Predicate = (!exitcond1 & tmp_78 & !tmp_83)> <Delay = 1.76>
+ST_13 : Operation 118 [1/1] (1.76ns)   --->   "br label %._crit_edge228" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:171]   --->   Operation 118 'br' <Predicate = (!exitcond1 & tmp_78 & !tmp_83)> <Delay = 1.76>
+ST_13 : Operation 119 [1/1] (2.55ns)   --->   "%ky_1 = add i32 %ky_load, 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:173]   --->   Operation 119 'add' 'ky_1' <Predicate = (!exitcond1 & tmp_78 & tmp_83)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 120 [1/1] (2.47ns)   --->   "%tmp_84 = icmp eq i32 %ky_1, 5" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:174]   --->   Operation 120 'icmp' 'tmp_84' <Predicate = (!exitcond1 & tmp_78 & tmp_83)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 121 [1/1] (0.00ns)   --->   "br i1 %tmp_84, label %6, label %.._crit_edge228_crit_edge" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:174]   --->   Operation 121 'br' <Predicate = (!exitcond1 & tmp_78 & tmp_83)> <Delay = 0.00>
+ST_13 : Operation 122 [1/1] (1.76ns)   --->   "store i32 0, i32* %kx"   --->   Operation 122 'store' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & !tmp_84)> <Delay = 1.76>
+ST_13 : Operation 123 [1/1] (1.76ns)   --->   "store i32 %ky_1, i32* %ky" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:173]   --->   Operation 123 'store' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & !tmp_84)> <Delay = 1.76>
+ST_13 : Operation 124 [1/1] (1.76ns)   --->   "br label %._crit_edge228" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:174]   --->   Operation 124 'br' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & !tmp_84)> <Delay = 1.76>
+ST_13 : Operation 125 [1/1] (0.00ns)   --->   "%ox_load = load i32* %ox" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:176]   --->   Operation 125 'load' 'ox_load' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84)> <Delay = 0.00>
+ST_13 : Operation 126 [1/1] (2.55ns)   --->   "%ox_1 = add i32 %ox_load, 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:176]   --->   Operation 126 'add' 'ox_1' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 127 [1/1] (2.47ns)   --->   "%tmp_85 = icmp eq i32 %ox_1, 24" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:177]   --->   Operation 127 'icmp' 'tmp_85' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 128 [1/1] (1.76ns)   --->   "store i32 0, i32* %ky"   --->   Operation 128 'store' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84)> <Delay = 1.76>
+ST_13 : Operation 129 [1/1] (0.00ns)   --->   "br i1 %tmp_85, label %7, label %.._crit_edge228_crit_edge10" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:177]   --->   Operation 129 'br' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84)> <Delay = 0.00>
+ST_13 : Operation 130 [1/1] (1.76ns)   --->   "store i32 0, i32* %kx"   --->   Operation 130 'store' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & !tmp_85)> <Delay = 1.76>
+ST_13 : Operation 131 [1/1] (1.76ns)   --->   "store i32 %ox_1, i32* %ox" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:176]   --->   Operation 131 'store' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & !tmp_85)> <Delay = 1.76>
+ST_13 : Operation 132 [1/1] (1.76ns)   --->   "br label %._crit_edge228" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:177]   --->   Operation 132 'br' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & !tmp_85)> <Delay = 1.76>
+ST_13 : Operation 133 [1/1] (0.00ns)   --->   "%oy_load = load i32* %oy" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:179]   --->   Operation 133 'load' 'oy_load' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & tmp_85)> <Delay = 0.00>
+ST_13 : Operation 134 [1/1] (2.55ns)   --->   "%oy_1 = add i32 %oy_load, 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:179]   --->   Operation 134 'add' 'oy_1' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & tmp_85)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 135 [1/1] (2.47ns)   --->   "%tmp_86 = icmp eq i32 %oy_1, 24" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180]   --->   Operation 135 'icmp' 'tmp_86' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & tmp_85)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 136 [1/1] (0.69ns)   --->   "%p_inp_1 = select i1 %tmp_86, i32 0, i32 %inp_1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180]   --->   Operation 136 'select' 'p_inp_1' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & tmp_85)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 137 [1/1] (0.69ns)   --->   "%p_2 = select i1 %tmp_86, i32 0, i32 %oy_1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180]   --->   Operation 137 'select' 'p_2' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & tmp_85)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_13 : Operation 138 [1/1] (1.76ns)   --->   "store i32 0, i32* %kx"   --->   Operation 138 'store' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & tmp_85)> <Delay = 1.76>
+ST_13 : Operation 139 [1/1] (1.76ns)   --->   "store i32 0, i32* %ox"   --->   Operation 139 'store' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & tmp_85)> <Delay = 1.76>
+ST_13 : Operation 140 [1/1] (1.76ns)   --->   "store i32 %p_2, i32* %oy" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180]   --->   Operation 140 'store' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & tmp_85)> <Delay = 1.76>
+ST_13 : Operation 141 [1/1] (1.76ns)   --->   "br label %._crit_edge228" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:184]   --->   Operation 141 'br' <Predicate = (!exitcond1 & tmp_78 & tmp_83 & tmp_84 & tmp_85)> <Delay = 1.76>
+ST_13 : Operation 142 [1/1] (0.00ns)   --->   "%inp_6 = phi i32 [ %p_inp_1, %7 ], [ %inp_1, %._crit_edge ], [ %inp_1, %.critedge232.._crit_edge228_crit_edge ], [ %inp_1, %.._crit_edge228_crit_edge ], [ %inp_1, %.._crit_edge228_crit_edge10 ]" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180]   --->   Operation 142 'phi' 'inp_6' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_13 : Operation 143 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str46, i32 %tmp_69)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:188]   --->   Operation 143 'specregionend' 'empty' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_13 : Operation 144 [1/1] (0.00ns)   --->   "br label %2" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:129]   --->   Operation 144 'br' <Predicate = (!exitcond1)> <Delay = 0.00>
+
+State 14 <SV = 9> <Delay = 8.65>
+ST_14 : Operation 145 [1/1] (3.63ns)   --->   "%tmp_V_99 = call i32 @_ssdm_op_Read.ap_fifo.volatile.i32P(i32* %in_V_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:144]   --->   Operation 145 'read' 'tmp_V_99' <Predicate = (!exitcond1 & tmp_70 & !or_cond2)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_14 : Operation 146 [1/1] (0.00ns)   --->   "%tmp_82 = trunc i32 %tmp_V_99 to i8" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:145]   --->   Operation 146 'trunc' 'tmp_82' <Predicate = (!exitcond1 & tmp_70 & !or_cond2)> <Delay = 0.00>
+ST_14 : Operation 147 [1/1] (1.76ns)   --->   "br label %.critedge_ifconv"   --->   Operation 147 'br' <Predicate = (!exitcond1 & tmp_70 & !or_cond2)> <Delay = 1.76>
+ST_14 : Operation 148 [1/1] (0.00ns)   --->   "%storemerge = phi i8 [ %tmp_82, %.preheader ], [ 0, %4 ]" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:145]   --->   Operation 148 'phi' 'storemerge' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.00>
+ST_14 : Operation 149 [1/1] (0.00ns)   --->   "%tmp_75 = zext i32 %inp to i64" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:149]   --->   Operation 149 'zext' 'tmp_75' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.00>
+ST_14 : Operation 150 [1/1] (0.00ns)   --->   "%inputBuf_V_addr = getelementptr [10500 x i8]* %inputBuf_V, i64 0, i64 %tmp_75" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:149]   --->   Operation 150 'getelementptr' 'inputBuf_V_addr' <Predicate = (!exitcond1 & tmp_70)> <Delay = 0.00>
+ST_14 : Operation 151 [1/1] (3.25ns)   --->   "store i8 %storemerge, i8* %inputBuf_V_addr, align 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:149]   --->   Operation 151 'store' <Predicate = (!exitcond1 & tmp_70)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 10500> <RAM>
+ST_14 : Operation 152 [1/1] (0.00ns) (grouped into LUT with out node tmp2)   --->   "%tmp_89 = shl i32 %tmp, 5"   --->   Operation 152 'shl' 'tmp_89' <Predicate = (tmp_78)> <Delay = 0.00>
+ST_14 : Operation 153 [1/1] (0.00ns) (grouped into LUT with out node tmp2)   --->   "%tmp_90 = shl i32 %tmp, 2"   --->   Operation 153 'shl' 'tmp_90' <Predicate = (tmp_78)> <Delay = 0.00>
+ST_14 : Operation 154 [1/1] (2.55ns) (out node of the LUT)   --->   "%tmp2 = sub i32 %tmp_89, %tmp_90"   --->   Operation 154 'sub' 'tmp2' <Predicate = (tmp_78)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 155 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp3 = add i32 %kx_load, %tmp2" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:167]   --->   Operation 155 'add' 'tmp3' <Predicate = (tmp_78)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 156 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%tmp_79 = add i32 %tmp3, %ox_load_1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:167]   --->   Operation 156 'add' 'tmp_79' <Predicate = (tmp_78)> <Delay = 4.37> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 15 <SV = 10> <Delay = 3.25>
+ST_15 : Operation 157 [1/1] (0.00ns)   --->   "%tmp_80 = zext i32 %tmp_79 to i64" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:167]   --->   Operation 157 'zext' 'tmp_80' <Predicate = (tmp_78)> <Delay = 0.00>
+ST_15 : Operation 158 [1/1] (0.00ns)   --->   "%inputBuf_V_addr_1 = getelementptr [10500 x i8]* %inputBuf_V, i64 0, i64 %tmp_80" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:167]   --->   Operation 158 'getelementptr' 'inputBuf_V_addr_1' <Predicate = (tmp_78)> <Delay = 0.00>
+ST_15 : Operation 159 [2/2] (3.25ns)   --->   "%inputBuf_V_load = load i8* %inputBuf_V_addr_1, align 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:167]   --->   Operation 159 'load' 'inputBuf_V_load' <Predicate = (tmp_78)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 10500> <RAM>
+
+State 16 <SV = 11> <Delay = 6.88>
+ST_16 : Operation 160 [1/2] (3.25ns)   --->   "%inputBuf_V_load = load i8* %inputBuf_V_addr_1, align 1" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:167]   --->   Operation 160 'load' 'inputBuf_V_load' <Predicate = (tmp_78)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 10500> <RAM>
+ST_16 : Operation 161 [1/1] (0.00ns)   --->   "%inElem_V = sext i8 %inputBuf_V_load to i32" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:167]   --->   Operation 161 'sext' 'inElem_V' <Predicate = (tmp_78)> <Delay = 0.00>
+ST_16 : Operation 162 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i32P(i32* %out_V_V, i32 %inElem_V)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:168]   --->   Operation 162 'write' <Predicate = (tmp_78)> <Delay = 3.63> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+
+State 17 <SV = 9> <Delay = 0.00>
+ST_17 : Operation 163 [1/1] (0.00ns)   --->   "%empty_111 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str45, i32 %tmp_67)" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:189]   --->   Operation 163 'specregionend' 'empty_111' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 164 [1/1] (0.00ns)   --->   "br label %.loopexit" [LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:189]   --->   Operation 164 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:72) [7]  (3.63 ns)
+	fifo write on port 'out_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:74) [8]  (3.63 ns)
+
+ <State 2>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:76) [9]  (3.63 ns)
+	fifo write on port 'out_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:78) [10]  (3.63 ns)
+
+ <State 3>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:80) [11]  (3.63 ns)
+	fifo write on port 'out_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:82) [12]  (3.63 ns)
+
+ <State 4>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:84) [13]  (3.63 ns)
+	fifo write on port 'out_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:86) [14]  (3.63 ns)
+
+ <State 5>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:88) [15]  (3.63 ns)
+	fifo write on port 'out_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:90) [16]  (3.63 ns)
+
+ <State 6>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:92) [17]  (3.63 ns)
+	fifo write on port 'out_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:94) [18]  (3.63 ns)
+
+ <State 7>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:96) [19]  (3.63 ns)
+	fifo write on port 'out_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:98) [20]  (3.63 ns)
+
+ <State 8>: 8.51ns
+The critical path consists of the following:
+	'mul' operation ('tmp4', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:193) [26]  (8.51 ns)
+
+ <State 9>: 8.51ns
+The critical path consists of the following:
+	'mul' operation ('KER_bound', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:193) [28]  (8.51 ns)
+
+ <State 10>: 2.55ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:199) [31]  (0 ns)
+	'add' operation ('i', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:199) [33]  (2.55 ns)
+
+ <State 11>: 7.27ns
+The critical path consists of the following:
+	fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:201) [38]  (3.63 ns)
+	fifo write on port 'out_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:202) [39]  (3.63 ns)
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 8.75ns
+The critical path consists of the following:
+	'phi' operation ('inp', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180) with incoming values : ('inp', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:151) ('p_inp_1', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180) [63]  (0 ns)
+	'add' operation ('inp', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:151) [96]  (2.55 ns)
+	multiplexor before 'phi' operation ('inp') with incoming values : ('inp', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:151) ('p_inp_1', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180) [108]  (1.77 ns)
+	'phi' operation ('inp') with incoming values : ('inp', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:151) ('p_inp_1', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180) [108]  (0 ns)
+	'icmp' operation ('tmp_78', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:161) [109]  (2.47 ns)
+	multiplexor before 'phi' operation ('inp_6', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180) with incoming values : ('inp', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:151) ('p_inp_1', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180) [162]  (1.77 ns)
+	'phi' operation ('inp_6', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180) with incoming values : ('inp', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:151) ('p_inp_1', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:180) [162]  (0 ns)
+	blocking operation 0.187 ns on control path)
+
+ <State 14>: 8.66ns
+The critical path consists of the following:
+	fifo read on port 'in_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:144) [86]  (3.63 ns)
+	multiplexor before 'phi' operation ('storemerge', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:145) with incoming values : ('tmp_82', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:145) [90]  (1.77 ns)
+	'phi' operation ('storemerge', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:145) with incoming values : ('tmp_82', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:145) [90]  (0 ns)
+	'store' operation (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:149) of variable 'storemerge', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:145 on array 'inputBuf.V', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:113 [95]  (3.25 ns)
+
+ <State 15>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('inputBuf_V_addr_1', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:167) [123]  (0 ns)
+	'load' operation ('inputBuf_V_load', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:167) on array 'inputBuf.V', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:113 [124]  (3.25 ns)
+
+ <State 16>: 6.89ns
+The critical path consists of the following:
+	'load' operation ('inputBuf_V_load', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:167) on array 'inputBuf.V', LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:113 [124]  (3.25 ns)
+	fifo write on port 'out_V_V' (LeNet_wrapper/../hw_library/stream_convolution_slideWindow.h:168) [126]  (3.63 ns)
+
+ <State 17>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

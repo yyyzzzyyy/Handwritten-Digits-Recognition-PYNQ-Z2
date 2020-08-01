@@ -1,0 +1,36 @@
+digraph ap_test{
+graph [splines=ortho]
+rankdir=BT;
+size="500, 500";
+1 [shape=box fixedsize=true width=2.25 height=0.25]
+2 [shape=box fixedsize=true width=2.0 height=0.25]
+
+3 [shape=box fixedsize=true width=2.375 height=0.25]
+4 [shape=box fixedsize=true width=2.125 height=0.25]
+
+
+231[shape=box fixedsize=true width=1.8666666666666667 height=2.0]
+232[shape=box fixedsize=true width=1.75 height=2.0]
+233[shape=box fixedsize=true width=1.9833333333333334 height=2.0]
+234[shape=box fixedsize=true width=2.1 height=2.0]
+235[shape=box fixedsize=true width=1.75 height=2.0]
+236[shape=box fixedsize=true width=2.1 height=2.0]
+237[shape=box fixedsize=true width=1.9833333333333334 height=2.0]
+238[shape=box fixedsize=true width=2.1 height=2.0]
+239[shape=box fixedsize=true width=1.9833333333333334 height=2.0]
+240[shape=box fixedsize=true width=1.9833333333333334 height=2.0]
+
+1 -> 231
+2 -> 231
+240 -> 3
+240 -> 4
+231 -> 232
+232 -> 233
+233 -> 234
+234 -> 235
+235 -> 236
+236 -> 237
+237 -> 238
+238 -> 239
+239 -> 240
+}
