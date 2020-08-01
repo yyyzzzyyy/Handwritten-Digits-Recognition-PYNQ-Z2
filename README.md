@@ -14,9 +14,13 @@
 4. TensorFlow：1.12版本；
 
 # Repository Content
+
 1. Sourcecode目录：
+
 1.1 LeNet_wrapper：HLS项目的顶层文件与头文件；
+
 1.2 hw_library：存放网络推理阶段使用的函数，包括卷积操作、Pooling操作、全连接操作等；
+
 1.3 lenet_op.prj：存放HLS Project；
 
 
